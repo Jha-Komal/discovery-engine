@@ -1,0 +1,50 @@
+[
+  {
+    "id": "a1e85b20-0363-41db-bd4b-662bee994ae3",
+    "title": "Trust/Authencity Concerns Hinder Purchases",
+    "description": "Users frequently express concerns about the authenticity of products, which significantly impacts their willingness to convert wishlist items into purchases. Addressing these trust issues is crucial for increasing confidence in the platform and encouraging users to finalize their purchases.",
+    "quantifiedMetric": "22% of purchase barrier mentions cite trust/authenticity concerns, the largest barrier category.",
+    "affectedShare": 0.34,
+    "relatedBarriers": [
+      "trust/authenticity concern"
+    ],
+    "priority": "high",
+    "comparisonNote": "This opportunity is significantly larger than the return/exchange friction opportunity, which accounts for 110 mentions."
+  },
+  {
+    "id": "22faa610-87c0-4e82-b28e-5252eb5d02df",
+    "title": "Return/Exchange Friction Deters Purchases",
+    "description": "Many users report difficulties with the return and exchange processes, which creates a barrier to purchasing wishlisted items. Streamlining these processes can enhance user confidence and facilitate smoother transactions, ultimately leading to higher conversion rates.",
+    "quantifiedMetric": "4% of purchase barrier mentions cite return/exchange friction, the second largest barrier category.",
+    "affectedShare": 0.11,
+    "relatedBarriers": [
+      "return/exchange friction"
+    ],
+    "priority": "medium",
+    "comparisonNote": "This opportunity is about three times smaller than the trust/authenticity concerns opportunity."
+  },
+  {
+    "id": "192f28cc-2dcb-4334-9e6c-351ce554aab2",
+    "title": "Fit/Size Uncertainty Blocks Wishlist Conversion",
+    "description": "Uncertainty regarding fit and size is a common concern among users, leading to hesitation in purchasing wishlisted items. Providing clearer sizing information and fit guidance can help alleviate these concerns and encourage users to complete their purchases.",
+    "quantifiedMetric": "2% of purchase barrier mentions cite fit uncertainty, a notable barrier category.",
+    "affectedShare": 0.03,
+    "relatedBarriers": [
+      "fit_uncertainty"
+    ],
+    "priority": "medium",
+    "comparisonNote": "This opportunity is smaller than both the trust/authenticity and return/exchange friction opportunities."
+  },
+  {
+    "id": "dd2ec44d-f272-426c-ab50-642f51a3237d",
+    "title": "Need for External Validation Before Purchase",
+    "description": "Users often seek external validation from friends or family before making a purchase, indicating a need for social proof. Enhancing social validation features can help users feel more confident in their decisions and increase conversion rates from wishlists.",
+    "quantifiedMetric": "8 mentions of needing external validation were noted, indicating a significant area for improvement.",
+    "affectedShare": 0.01,
+    "relatedBarriers": [
+      "needs external validation"
+    ],
+    "priority": "medium",
+    "comparisonNote": "This opportunity is smaller than the fit/size uncertainty opportunity, which has a more substantial impact."
+  }
+]

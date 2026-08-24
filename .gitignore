@@ -44,9 +44,11 @@ next-env.d.ts
 /AGENTS.md
 /CLAUDE.md
 
-# pipeline output — regenerable via `npm run clean` + the dashboard's
-# Load Reviews / Run Analysis buttons (requires your own OPENAI_API_KEY)
+# cleaned CSVs — regenerable via `npm run clean` (fast, no AI cost)
 /refined-data/*.csv
-/generated/*.json
 !/refined-data/.gitkeep
-!/generated/.gitkeep
+
+# NOTE: /generated/*.json (pipeline output — reviews, analysis, insights,
+# opportunities, recommendations) is intentionally NOT ignored — it's
+# committed so the dashboard has real data without re-running the paid
+# OpenAI pipeline on every clone.
