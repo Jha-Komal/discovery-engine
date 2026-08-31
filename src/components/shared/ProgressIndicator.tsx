@@ -6,8 +6,7 @@ const STAGES: { key: PipelineStatus; label: string }[] = [
   { key: 'loading', label: 'Loading Reviews' },
   { key: 'analyzing', label: 'Analyzing Reviews' },
   { key: 'aggregating', label: 'Generating Statistics' },
-  { key: 'generating_insights', label: 'Generating Insights' },
-  { key: 'generating_opportunities', label: 'Identifying Opportunities' },
+  { key: 'generating_research_report', label: 'Generating Research Report' },
   { key: 'generating_recommendations', label: 'Generating Recommendations' },
   { key: 'completed', label: 'Completed' },
 ];

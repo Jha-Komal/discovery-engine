@@ -1,9 +1,10 @@
 import { randomUUID } from 'crypto';
 import { loadRefinedReviews } from './csv-loader';
 import * as store from './store';
-import { analyzeReviewBatch, generateInsights, generateOpportunities, generateRecommendations } from './ai-service';
+import { analyzeReviewBatch, generateResearchReport, generateRecommendations } from './ai-service';
 import { computeAggregation } from './aggregation';
-import { ANALYSIS_BATCH_SIZE } from './constants';
+import { sampleByRelevance } from './sampling';
+import { ANALYSIS_BATCH_SIZE, RESEARCH_REPORT_SAMPLE_SIZE } from './constants';
 import type { ReviewWithAnalysis } from './types';
 
 /** Loads refined CSVs into generated/reviews.json (idempotent — safe to call repeatedly). */
@@ -21,7 +22,7 @@ async function joinReviewsWithAnalysis(): Promise<ReviewWithAnalysis[]> {
   return reviews.map((r) => ({ ...r, analysis: analysisById.get(r.id) ?? null }));
 }
 
-/** Runs the full pipeline: load -> analyze -> aggregate -> insights -> opportunities -> recommendations. */
+/** Runs the full pipeline: load -> analyze -> aggregate -> research report -> recommendations. */
 export async function runFullPipeline(): Promise<void> {
   try {
     // Step 1: load
@@ -48,7 +49,14 @@ export async function runFullPipeline(): Promise<void> {
       const progress = 5 + Math.floor(((i + 1) / Math.max(batches.length, 1)) * 55);
       await store.setStatus('analyzing', progress, `Analyzing batch ${i + 1}/${batches.length}`);
 
-      const batchInput = batch.map((r) => ({ id: r.id, review: r.review, source: r.source }));
+      const batchInput = batch.map((r) => ({
+        id: r.id,
+        review: r.review,
+        title: r.title,
+        source: r.source,
+        rating: r.rating,
+        date: r.reviewDate,
+      }));
 
       try {
         const results = await analyzeReviewBatch(batchInput);
@@ -64,34 +72,17 @@ export async function runFullPipeline(): Promise<void> {
     const stats = computeAggregation(withAnalysis);
     await store.saveAggregation(stats);
 
-    // Step 4: insights
-    await store.setStatus('generating_insights', 75, 'Generating insights');
-    const representativeReviews = withAnalysis
-      .filter((r) => r.analysis !== null)
-      .slice(0, 30)
-      .map((r) => ({ id: r.id, review: r.review, sentiment: r.analysis!.sentiment }));
+    // Step 4: research report (data quality, Q1-10, behavioral chains, segment×problem
+    // matrix, ranked opportunity hypotheses, contradictions, research gaps — evidence only)
+    await store.setStatus('generating_research_report', 75, 'Generating research report');
+    const sample = sampleByRelevance(withAnalysis, RESEARCH_REPORT_SAMPLE_SIZE);
+    const reportContent = await generateResearchReport(stats, sample);
+    const report = { content: reportContent, generatedAt: new Date().toISOString(), recordCount: stats.analyzedCount };
+    await store.saveResearchReport(report);
 
-    const insightsRaw = await generateInsights(stats, representativeReviews);
-    const insights = insightsRaw.map((i) => ({ id: randomUUID(), ...i }));
-    await store.saveInsights(insights);
-
-    // Step 5: opportunity areas (quantified, comparable)
-    await store.setStatus('generating_opportunities', 85, 'Identifying opportunity areas');
-    const opportunitiesRaw = await generateOpportunities(
-      stats,
-      insights.map((i) => ({ question: i.question, answer: i.answer }))
-    );
-    const opportunities = opportunitiesRaw
-      .map((o) => ({ id: randomUUID(), ...o }))
-      .sort((a, b) => b.affectedShare - a.affectedShare);
-    await store.saveOpportunities(opportunities);
-
-    // Step 6: recommendations
+    // Step 5: recommendations (the only stage allowed to propose solutions)
     await store.setStatus('generating_recommendations', 93, 'Generating recommendations');
-    const recommendationsRaw = await generateRecommendations(
-      stats,
-      opportunities.map((o) => ({ title: o.title, description: o.description, priority: o.priority }))
-    );
+    const recommendationsRaw = await generateRecommendations(stats, report.content);
     const recommendations = recommendationsRaw.map((r) => ({ id: randomUUID(), ...r }));
     await store.saveRecommendations(recommendations);
 

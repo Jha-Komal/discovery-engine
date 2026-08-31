@@ -45,19 +45,33 @@ export function FilterPanel({
         <option value="positive">Positive</option>
         <option value="neutral">Neutral</option>
         <option value="negative">Negative</option>
+        <option value="mixed">Mixed</option>
       </Select>
 
       <Select
-        value={filters.wishlistIntent ?? ''}
+        value={filters.relevanceClass ?? ''}
         onChange={(e) =>
-          onChange({ ...filters, wishlistIntent: (e.target.value || undefined) as ReviewFilters['wishlistIntent'], page: 1 })
+          onChange({ ...filters, relevanceClass: (e.target.value || undefined) as ReviewFilters['relevanceClass'], page: 1 })
         }
       >
-        <option value="">All Wishlist Intent</option>
-        <option value="genuine_intent">Genuine Intent</option>
-        <option value="bookmark_only">Bookmark Only</option>
-        <option value="price_tracking">Price Tracking</option>
-        <option value="unclear">Unclear</option>
+        <option value="">All Relevance</option>
+        <option value="DIRECT_WISHLIST">Direct Wishlist</option>
+        <option value="ADJACENT_DECISION">Adjacent Decision</option>
+        <option value="GENERAL_ECOMMERCE">General E-commerce</option>
+        <option value="IRRELEVANT">Irrelevant</option>
+      </Select>
+
+      <Select
+        value={filters.purchaseIntent ?? ''}
+        onChange={(e) =>
+          onChange({ ...filters, purchaseIntent: (e.target.value || undefined) as ReviewFilters['purchaseIntent'], page: 1 })
+        }
+      >
+        <option value="">All Purchase Intent</option>
+        <option value="HIGH">High</option>
+        <option value="MEDIUM">Medium</option>
+        <option value="LOW">Low</option>
+        <option value="UNKNOWN">Unknown</option>
       </Select>
     </div>
   );

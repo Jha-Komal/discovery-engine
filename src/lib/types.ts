@@ -2,9 +2,8 @@
 
 export type ReviewSource = 'play_store' | 'app_store' | 'reddit' | 'consumer_complaints';
 
-export type Sentiment = 'positive' | 'neutral' | 'negative';
-
-export type WishlistIntent = 'genuine_intent' | 'bookmark_only' | 'price_tracking' | 'unclear';
+/** UI-level lowercase sentiment, derived from analysis.sentiment.overall. */
+export type Sentiment = 'positive' | 'neutral' | 'negative' | 'mixed';
 
 export type Priority = 'quick_win' | 'medium' | 'high' | 'long_term';
 
@@ -13,22 +12,10 @@ export type PipelineStatus =
   | 'loading'
   | 'analyzing'
   | 'aggregating'
-  | 'generating_insights'
-  | 'generating_opportunities'
+  | 'generating_research_report'
   | 'generating_recommendations'
   | 'completed'
   | 'error';
-
-export type DecisionFactor =
-  | 'fit'
-  | 'size'
-  | 'styling'
-  | 'price'
-  | 'reviews'
-  | 'occasion'
-  | 'social_validation'
-  | 'brand_trust'
-  | 'return_policy';
 
 export interface Review {
   id: string;
@@ -41,81 +28,213 @@ export interface Review {
   url: string | null;
 }
 
-/** Per-review AI extraction result, tailored to wishlist-to-purchase research questions. */
+export type EvidenceStrength = 'EXPLICIT' | 'STRONG_INFERENCE' | 'WEAK_INFERENCE' | 'UNKNOWN';
+export type RelevanceClass = 'DIRECT_WISHLIST' | 'ADJACENT_DECISION' | 'GENERAL_ECOMMERCE' | 'IRRELEVANT';
+export type PurchaseIntentLevel = 'HIGH' | 'MEDIUM' | 'LOW' | 'UNKNOWN';
+export type Severity = 'HIGH' | 'MEDIUM' | 'LOW' | 'UNKNOWN';
+export type TriState = 'YES' | 'NO' | 'UNKNOWN';
+export type OverallSentiment = 'POSITIVE' | 'NEGATIVE' | 'MIXED' | 'NEUTRAL';
+export type DecisionOutcomeStatus =
+  | 'PURCHASED'
+  | 'POSTPONED'
+  | 'ABANDONED'
+  | 'SWITCHED_PRODUCT'
+  | 'SWITCHED_PLATFORM'
+  | 'STILL_CONSIDERING'
+  | 'UNKNOWN';
+export type MetricRelevance = 'HIGH' | 'MEDIUM' | 'LOW' | 'NONE';
+
+export interface Barrier {
+  category: string;
+  description: string;
+  evidence: string;
+  severity: Severity;
+  evidenceStrength: EvidenceStrength;
+}
+
+export interface Uncertainty {
+  category: string;
+  description: string;
+  evidence: string;
+  evidenceStrength: EvidenceStrength;
+}
+
+export interface DecisionCriterion {
+  criterion: string;
+  evidence: string;
+}
+
+export interface SegmentSignal {
+  segment: string;
+  evidence: string;
+}
+
+/**
+ * Per-review AI evidence-extraction result. Mirrors the deep-research prompt's
+ * output contract 1:1 (see prompts/review-analysis.prompt.ts) — this stage
+ * extracts evidence only, it does not draw conclusions or propose solutions.
+ */
 export interface ReviewAnalysis {
   reviewId: string;
-  sentiment: Sentiment;
-  emotion: string;
-  themes: string[];
-  painPoints: string[];
-  featureRequests: string[];
-  summary: string;
-  confidence: number;
 
-  /** Why the item was likely added to a wishlist (price-wait, uncertain-fit, gift-idea, ...) */
-  wishlistMotivation: string | null;
-  /** What's blocking purchase conversion (price, fit uncertainty, size unavailable, ...) */
-  purchaseBarrier: string | null;
-  /** Residual doubt remaining after the user shortlisted the product */
-  uncertaintyType: string | null;
-  /** How the user compares shortlisted/wishlisted products */
-  comparisonBehavior: string | null;
-  /** Where the user looks outside the app for validation/info */
-  externalInfoSought: string | null;
-  /** Which purchase-decision factors are mentioned */
-  decisionFactors: DecisionFactor[];
-  /** Genuine purchase intent vs. just bookmarking vs. price tracking */
-  wishlistIntent: WishlistIntent;
-  /** Freeform tag hinting at the user segment this review reveals, if any */
-  segmentHint: string | null;
+  relevance: {
+    class: RelevanceClass;
+    reason: string;
+    evidenceStrength: EvidenceStrength;
+  };
+
+  journeyStages: string[];
+
+  wishlistBehavior: {
+    jobCategory: string | null;
+    jobDescription: string | null;
+    supportingEvidence: string | null;
+  };
+
+  purchaseIntent: {
+    level: PurchaseIntentLevel;
+    reason: string | null;
+    evidenceStrength: EvidenceStrength;
+  };
+
+  barriers: Barrier[];
+  uncertainties: Uncertainty[];
+
+  postponement: {
+    present: TriState;
+    reason: string | null;
+    triggerOrCondition: string | null;
+  };
+
+  decisionCriteria: DecisionCriterion[];
+
+  comparisonBehavior: {
+    present: TriState;
+    itemsCompared: string | null;
+    comparisonDimensions: string[];
+    difficulty: string | null;
+    outcome: string | null;
+  };
+
+  externalInformationSeeking: {
+    present: TriState;
+    sources: string[];
+    informationSought: string[];
+    platformInformationGap: string | null;
+    evidence: string | null;
+  };
+
+  socialValidation: {
+    present: TriState;
+    source: string | null;
+    validationNeeded: string | null;
+    evidence: string | null;
+  };
+
+  workarounds: string[];
+  segmentSignals: SegmentSignal[];
+
+  sentiment: {
+    overall: OverallSentiment;
+    emotions: string[];
+  };
+
+  decisionOutcome: {
+    status: DecisionOutcomeStatus;
+    evidence: string | null;
+  };
+
+  metricConnection: {
+    relevance: MetricRelevance;
+    reason: string;
+  };
+
+  evidenceQuote: string;
+  researcherNote: string;
 }
 
 export interface ReviewWithAnalysis extends Review {
   analysis: ReviewAnalysis | null;
 }
 
+/** Count of a category broken down by the relevance class of the records it came from. */
+export type ByRelevanceClass = Record<RelevanceClass, number>;
+
 export interface AggregationStats {
   totalCount: number;
   analyzedCount: number;
-  positiveCount: number;
-  neutralCount: number;
-  negativeCount: number;
   averageRating: number;
   sourceDistribution: Record<string, number>;
-  themeFrequency: Record<string, number>;
-  painPointFrequency: Record<string, number>;
+
+  /** Exact, authoritative counts — any relevance-class attribution elsewhere must be
+   *  consistent with these totals (e.g. a DIRECT_WISHLIST-attributed count can never
+   *  exceed relevanceClassDistribution.DIRECT_WISHLIST). */
+  relevanceClassDistribution: Record<string, number>;
+  journeyStageFrequency: Record<string, number>;
+
+  wishlistJobCategoryDistribution: Record<string, number>;
+  wishlistJobCategoryByRelevanceClass: Record<string, ByRelevanceClass>;
+
+  purchaseIntentDistribution: Record<string, number>;
+  purchaseIntentByRelevanceClass: Record<string, ByRelevanceClass>;
+
+  barrierCategoryFrequency: Record<string, number>;
+  barrierCategoryByRelevanceClass: Record<string, ByRelevanceClass>;
+  barrierSeverityDistribution: Record<string, number>;
+
+  uncertaintyCategoryFrequency: Record<string, number>;
+  uncertaintyCategoryByRelevanceClass: Record<string, ByRelevanceClass>;
+
+  postponementPresentDistribution: Record<string, number>;
+  postponementReasonFrequency: Record<string, number>;
+  postponementReasonByRelevanceClass: Record<string, ByRelevanceClass>;
+
+  decisionCriteriaFrequency: Record<string, number>;
+  decisionCriteriaByRelevanceClass: Record<string, ByRelevanceClass>;
+
+  comparisonPresentDistribution: Record<string, number>;
+
+  externalInfoSourceFrequency: Record<string, number>;
+  externalInfoSourceByRelevanceClass: Record<string, ByRelevanceClass>;
+
+  socialValidationPresentDistribution: Record<string, number>;
+
+  workaroundFrequency: Record<string, number>;
+  workaroundByRelevanceClass: Record<string, ByRelevanceClass>;
+
+  segmentSignalFrequency: Record<string, number>;
+  segmentSignalByRelevanceClass: Record<string, ByRelevanceClass>;
+
+  sentimentDistribution: Record<string, number>;
   emotionFrequency: Record<string, number>;
-  wishlistMotivationDistribution: Record<string, number>;
-  purchaseBarrierDistribution: Record<string, number>;
-  uncertaintyTypeDistribution: Record<string, number>;
-  comparisonBehaviorDistribution: Record<string, number>;
-  externalInfoSoughtDistribution: Record<string, number>;
-  decisionFactorDistribution: Record<string, number>;
-  wishlistIntentDistribution: Record<string, number>;
-  segmentHintDistribution: Record<string, number>;
+
+  decisionOutcomeDistribution: Record<string, number>;
+
+  metricRelevanceDistribution: Record<string, number>;
 }
 
+/** Quick Q&A-format answer to one of the 10 discovery questions — a lighter, scannable
+ *  companion to the full research report's Q1-10 section, generated as its own fast
+ *  standalone step from already-computed analysis/aggregation. */
 export interface Insight {
   id: string;
   question: string;
   answer: string;
   confidence: number;
-  supportingReviewIds: string[];
 }
 
-/** A quantified, comparable opportunity area that could move the wishlist→purchase metric. */
-export interface OpportunityArea {
-  id: string;
-  title: string;
-  description: string;
-  /** e.g. "38% of genuine-intent wishlist reviews cite fit/size uncertainty" */
-  quantifiedMetric: string;
-  /** Estimated share of relevant reviews affected, 0-1 */
-  affectedShare: number;
-  relatedBarriers: string[];
-  priority: Priority;
-  /** How this opportunity compares in size/impact to the others */
-  comparisonNote: string;
+/**
+ * Cross-review synthesis report: data quality, the 10 discovery questions,
+ * behavioral chains, segment×problem matrix, and ranked opportunity
+ * hypotheses. Research-only (no feature/solution proposals) — see
+ * prompts/research-report.prompt.ts. Free-text/markdown, not small JSON
+ * objects, since it's a full structured report rather than a dashboard list.
+ */
+export interface ResearchReport {
+  content: string;
+  generatedAt: string;
+  /** How many analyzed reviews fed into this report (denominator context) */
+  recordCount: number;
 }
 
 export interface Recommendation {
@@ -135,8 +254,8 @@ export interface StatusState {
 export interface ReviewFilters {
   source?: ReviewSource;
   sentiment?: Sentiment;
-  wishlistIntent?: WishlistIntent;
-  theme?: string;
+  relevanceClass?: RelevanceClass;
+  purchaseIntent?: PurchaseIntentLevel;
   keyword?: string;
   page?: number;
   limit?: number;

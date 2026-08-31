@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  /* Myntra brand palette */
+  /* Myntra brand palette (dark theme by default) */
   --myntra-pink: #ff3f6c;
   --myntra-pink-dark: #e62e5c;
-  --myntra-pink-light: #fff1f4;
+  --myntra-pink-light: #3a1420;
   --myntra-orange: #ff905a;
 
-  --background: #ffffff;
-  --foreground: #282c3f;
-  --muted: #94969f;
-  --muted-background: #f5f5f6;
-  --border: #eaeaec;
-  --card: #ffffff;
+  --background: #0e0f13;
+  --foreground: #eceef2;
+  --muted: #9497a3;
+  --muted-background: #1a1c22;
+  --border: #2a2d36;
+  --card: #16181e;
 
-  --positive: #14958f;
-  --negative: #ff3f6c;
+  --positive: #2bbdb5;
+  --negative: #ff5c82;
   --neutral: #ff905a;
 }
 

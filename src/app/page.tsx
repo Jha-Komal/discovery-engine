@@ -20,8 +20,7 @@ const ACTIVE_STATUSES = new Set([
   'loading',
   'analyzing',
   'aggregating',
-  'generating_insights',
-  'generating_opportunities',
+  'generating_research_report',
   'generating_recommendations',
 ]);
 
@@ -110,28 +109,29 @@ export default function DashboardPage() {
             <div className="grid grid-cols-2 gap-4 lg:grid-cols-5">
               <MetricCard label="Total Reviews" value={stats.totalCount.toLocaleString()} icon={MessageSquareText} />
               <MetricCard label="Analyzed" value={stats.analyzedCount.toLocaleString()} icon={PlayCircle} />
-              <MetricCard label="Positive" value={stats.positiveCount.toLocaleString()} icon={ThumbsUp} tone="positive" />
-              <MetricCard label="Negative" value={stats.negativeCount.toLocaleString()} icon={ThumbsDown} tone="negative" />
+              <MetricCard label="Positive" value={(stats.sentimentDistribution.POSITIVE ?? 0).toLocaleString()} icon={ThumbsUp} tone="positive" />
+              <MetricCard label="Negative" value={(stats.sentimentDistribution.NEGATIVE ?? 0).toLocaleString()} icon={ThumbsDown} tone="negative" />
               <MetricCard label="Avg Rating" value={stats.averageRating.toFixed(2)} icon={Star} tone="neutral" />
             </div>
 
             <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
               <SentimentPieChart
-                positive={stats.positiveCount}
-                neutral={stats.neutralCount}
-                negative={stats.negativeCount}
+                positive={stats.sentimentDistribution.POSITIVE ?? 0}
+                neutral={stats.sentimentDistribution.NEUTRAL ?? 0}
+                negative={stats.sentimentDistribution.NEGATIVE ?? 0}
+                mixed={stats.sentimentDistribution.MIXED ?? 0}
               />
               <DistributionBarChart title="Source Distribution" data={stats.sourceDistribution} />
-              <DistributionBarChart title="Top Themes" data={stats.themeFrequency} color="var(--myntra-orange)" />
-              <DistributionBarChart title="Top Pain Points" data={stats.painPointFrequency} color="var(--negative)" />
+              <DistributionBarChart title="Relevance Class" data={stats.relevanceClassDistribution} color="var(--myntra-orange)" />
+              <DistributionBarChart title="Top Barriers" data={stats.barrierCategoryFrequency} color="var(--negative)" />
               <DistributionBarChart
-                title="Purchase Barriers"
-                data={stats.purchaseBarrierDistribution}
+                title="Top Uncertainties"
+                data={stats.uncertaintyCategoryFrequency}
                 color="var(--myntra-pink)"
               />
               <DistributionBarChart
-                title="Wishlist Intent"
-                data={stats.wishlistIntentDistribution}
+                title="Purchase Intent"
+                data={stats.purchaseIntentDistribution}
                 color="var(--positive)"
               />
             </div>

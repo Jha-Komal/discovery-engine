@@ -1,9 +1,6 @@
-import type { AggregationStats, OpportunityArea } from '../types';
+import type { AggregationStats } from '../types';
 
-export function buildRecommendationPrompt(
-  stats: AggregationStats,
-  opportunities: Array<Pick<OpportunityArea, 'title' | 'description' | 'priority'>>
-): string {
+export function buildRecommendationPrompt(stats: AggregationStats, researchReport: string): string {
   return `You are a product strategy consultant producing an actionable roadmap to increase Myntra's wishlist-to-purchase conversion rate within 30 days.
 
 HARD CONSTRAINT: You may NOT recommend anything involving monetary incentives — no discounts, cashback, coupons, flash sales, or price reductions of any kind. Every recommendation must be a product, UX, information, trust, or engagement lever instead. If a recommendation would only work by cutting price, do not include it.
@@ -11,8 +8,10 @@ HARD CONSTRAINT: You may NOT recommend anything involving monetary incentives �
 REVIEW STATISTICS:
 ${JSON.stringify(stats, null, 2)}
 
-OPPORTUNITY AREAS IDENTIFIED:
-${JSON.stringify(opportunities, null, 2)}
+RESEARCH REPORT (evidence, discovery-question answers, behavioral chains, ranked opportunity hypotheses, and open research gaps — this report deliberately stops short of proposing solutions; that's your job here):
+${researchReport}
+
+Ground every recommendation in a specific opportunity hypothesis or research gap from the report above — do not recommend anything the report doesn't support. Where the report flags an opportunity as needing interview validation (P2/P3, or evidence_confidence below HIGH), reflect that uncertainty in the recommendation rather than treating it as settled.
 
 Generate concrete, specific product recommendations across 4 priority tiers:
 - quick_win: easy to implement, high impact, low effort (1-2 weeks)

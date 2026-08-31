@@ -14,8 +14,8 @@ export function useReviews(filters: ReviewFilters) {
   const params = new URLSearchParams();
   if (filters.source) params.set('source', filters.source);
   if (filters.sentiment) params.set('sentiment', filters.sentiment);
-  if (filters.wishlistIntent) params.set('wishlistIntent', filters.wishlistIntent);
-  if (filters.theme) params.set('theme', filters.theme);
+  if (filters.relevanceClass) params.set('relevanceClass', filters.relevanceClass);
+  if (filters.purchaseIntent) params.set('purchaseIntent', filters.purchaseIntent);
   if (filters.keyword) params.set('keyword', filters.keyword);
   params.set('page', String(filters.page ?? 1));
   params.set('limit', String(filters.limit ?? 25));

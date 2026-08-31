@@ -1,6 +1,6 @@
 {
-  "status": "analyzing",
-  "progress": 9,
-  "message": "Analyzing batch 11/124",
-  "updatedAt": "2026-08-24T06:49:31.644Z"
+  "status": "completed",
+  "progress": 100,
+  "message": "Pipeline completed successfully",
+  "updatedAt": "2026-08-31T20:12:30.077Z"
 }

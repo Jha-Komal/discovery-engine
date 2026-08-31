@@ -1,81 +1,62 @@
 [
   {
-    "id": "f29b4808-8c13-4202-abbe-788694966bcf",
+    "id": "f5ce177c-5fd2-43c9-9424-8b23c91ade85",
     "question": "Why do users add fashion products to their wishlist?",
-    "answer": "Users add fashion products to their wishlist for various reasons, including uncertainty about fit (6 mentions), comparison shopping (7 mentions), and simply browsing (2 mentions). The wishlist serves as a tool for users to save items they are interested in, either for future consideration or to track potential purchases. Additionally, 3 users mentioned saving gift ideas, indicating that the wishlist is also used for planning future gifts.",
-    "confidence": 0.8,
-    "supportingReviewIds": []
+    "answer": "Users add fashion products to their wishlist primarily to keep track of items they are interested in purchasing later. This allows them to compare options, monitor price changes, and revisit products they like without making an immediate purchase. The wishlist serves as a convenient tool for organizing potential purchases and making informed decisions.",
+    "confidence": 0.9
   },
   {
-    "id": "0f552edc-cb6f-47fb-afc7-6c75b2cd12ec",
+    "id": "fb4df3f4-88cb-467b-af82-a066438946da",
     "question": "What prevents wishlisted products from eventually being purchased?",
-    "answer": "The primary barriers preventing users from purchasing wishlisted products include trust/authenticity concerns (285 mentions), return/exchange friction (110 mentions), and fit uncertainty (26 mentions). Many users express hesitation due to previous negative experiences with product quality and customer service, leading to a lack of confidence in making a purchase. Additionally, issues related to delivery and return policies contribute to users' reluctance to convert their wishlist items into purchases.",
-    "confidence": 0.9,
-    "supportingReviewIds": [
-      "appstore_in_14458396582",
-      "appstore_in_14458293250"
-    ]
+    "answer": "Several factors prevent wishlisted products from being purchased, including price fluctuations, availability issues, and delivery constraints. Users often experience frustration when prices increase unexpectedly or when items become unavailable for delivery to their location. Additionally, technical issues with the app and dissatisfaction with customer service can deter purchases.",
+    "confidence": 0.9
   },
   {
-    "id": "4875aa0a-a02b-442c-8894-9288bfccc6ff",
+    "id": "55e30fbb-fbf9-455f-ac15-7d0c3b402837",
     "question": "What uncertainties remain after users have identified a product they like?",
-    "answer": "After identifying a product they like, users often remain uncertain about fit/size (29 mentions), color accuracy (2 mentions), quality (9 mentions), and authenticity (3 mentions). This uncertainty is compounded by previous experiences where products did not meet expectations, leading to hesitation in proceeding with a purchase.",
-    "confidence": 0.85,
-    "supportingReviewIds": []
+    "answer": "After identifying a product they like, users often face uncertainties regarding the accuracy of product images, fit and size, and the reliability of customer reviews. Concerns about the authenticity of products and potential discrepancies between the displayed and actual product quality also contribute to hesitation.",
+    "confidence": 0.8
   },
   {
-    "id": "e3e74942-e726-46f4-937c-112dd7bf3e61",
+    "id": "930e776e-0892-4bd7-badd-a874db14e054",
     "question": "What causes users to postpone a purchase?",
-    "answer": "Users postpone purchases due to several factors, including trust/authenticity concerns (285 mentions), return/exchange friction (110 mentions), and fit uncertainty (26 mentions). Additionally, some users express a need for external validation before making a purchase, indicating that they may seek opinions from friends or family before committing. The fear of poor customer service and complicated return processes also contribute to their decision to delay purchases.",
-    "confidence": 0.9,
-    "supportingReviewIds": [
-      "appstore_in_14458293250",
-      "appstore_in_14458396582"
-    ]
+    "answer": "Users postpone purchases due to a combination of factors such as waiting for better deals, uncertainty about fit and size, and concerns about product availability. Technical issues with the app and negative experiences with customer service also contribute to delays in purchasing decisions.",
+    "confidence": 0.8
   },
   {
-    "id": "76304b35-db03-4e9d-bc01-6b3038b5e250",
+    "id": "e929cbcc-f75b-4756-83b8-da3221c0054e",
     "question": "How do users compare multiple shortlisted products?",
-    "answer": "Users compare shortlisted products primarily across apps/platforms (9 mentions) and within their own wishlist (2 mentions). This indicates that users are actively looking for the best options available and may be using multiple sources to ensure they are making informed decisions. Additionally, some users ask friends or family for opinions, highlighting the importance of social validation in their decision-making process.",
-    "confidence": 0.75,
-    "supportingReviewIds": []
+    "answer": "Users compare multiple shortlisted products by using the wishlist to organize and review their options. They often look for differences in price, quality, and reviews to make informed decisions. The ability to easily access and manage wishlisted items is crucial for effective comparison.",
+    "confidence": 0.8
   },
   {
-    "id": "39312629-3edf-4af1-a3f2-1839a777df46",
+    "id": "f9a68655-6d32-407e-b246-ec549e1d5f12",
     "question": "What information do users seek outside Myntra/AJIO before purchasing?",
-    "answer": "The data does not provide specific insights into the external information users seek before purchasing. However, it can be inferred that users may look for product reviews, brand reputation, and comparisons with similar products on other platforms, given the emphasis on trust and authenticity concerns.",
-    "confidence": 0.5,
-    "supportingReviewIds": []
+    "answer": "Before purchasing, users often seek additional information such as price comparisons, product reviews, and recommendations from other platforms or social media. They may also look for detailed size guides and styling tips to ensure the product meets their expectations.",
+    "confidence": 0.7
   },
   {
-    "id": "649f9f45-585f-477a-a2d3-9575d41f2d61",
+    "id": "3f025890-1fc2-4879-a5d6-63639ea32b14",
     "question": "What role do fit, size, styling, price, reviews, occasion and social validation play?",
-    "answer": "Fit (48 mentions) and size (10 mentions) are critical factors influencing purchase decisions, as users express significant concern over whether items will fit properly. Price (46 mentions) is also a major consideration, with users often comparing prices across platforms. Styling (6 mentions) and occasion relevance play a lesser role but are still important. Reviews (3 mentions) are sought after as users look for validation from others regarding product quality and satisfaction. Social validation is also a factor, as users may seek opinions from friends or family before making a purchase.",
-    "confidence": 0.85,
-    "supportingReviewIds": []
+    "answer": "Fit and size are critical factors in purchasing decisions, as users want assurance that the product will suit them well. Styling and occasion influence the suitability of the product for specific events. Price and reviews impact perceived value and quality, while social validation from peers or influencers can reinforce purchase intent.",
+    "confidence": 0.9
   },
   {
-    "id": "9329aa82-8e53-480f-8055-1013e235b3df",
+    "id": "bf76f439-f813-418c-a2ab-eeeb3711598c",
     "question": "When do users use the wishlist as genuine purchase intent versus simply as a bookmarking mechanism?",
-    "answer": "Users exhibit genuine purchase intent when they have a clear need for the product, as indicated by the 'genuine_intent' category (575 mentions). In contrast, the 'bookmark_only' category (169 mentions) suggests that some users simply use the wishlist to save items for later without a strong intention to purchase. The distinction often lies in the user's confidence in the product's fit and quality, as well as their trust in the brand.",
-    "confidence": 0.8,
-    "supportingReviewIds": []
+    "answer": "Users tend to use the wishlist as genuine purchase intent when they are seriously considering buying the product soon, often revisiting the list to check for updates or price changes. It serves as a bookmarking mechanism when users are casually browsing or comparing options without immediate intent to buy.",
+    "confidence": 0.8
   },
   {
-    "id": "f0299b8b-e486-4d6c-88da-89b4a12fc6dd",
+    "id": "353c209d-2eef-4935-82a0-49fee3f4e64d",
     "question": "How do these behaviors differ across user segments?",
-    "answer": "Different user segments exhibit varying behaviors based on their motivations and experiences. For instance, 'frequent-buyers' (44 mentions) may have higher confidence in their purchases and are less likely to hesitate due to trust issues. In contrast, 'frustrated-customers' (42 mentions) and 'trust-seekers' (1 mention) are more likely to express concerns about product quality and customer service, leading to increased hesitation in converting wishlist items to purchases.",
-    "confidence": 0.75,
-    "supportingReviewIds": []
+    "answer": "Different user segments exhibit varying behaviors based on their shopping habits and priorities. Frequent shoppers may use the wishlist more strategically for purchase planning, while casual browsers might use it for inspiration or to track trends. Younger users may prioritize social validation, whereas older users might focus more on practicality and fit.",
+    "confidence": 0.7
   },
   {
-    "id": "faf8a1ab-0963-45d2-a58e-eddd8c0a665f",
+    "id": "76646575-ac5b-49f3-9fd5-6d2a16ed6935",
     "question": "What unmet needs emerge consistently across user conversations?",
-    "answer": "Consistent unmet needs include a desire for improved customer service, clearer return policies, and better product quality assurance. Users frequently express frustration over trust issues with product authenticity and the quality of customer support they receive. Additionally, there is a need for more transparent communication regarding order status and return processes, as many users report confusion and dissatisfaction with their experiences.",
-    "confidence": 0.85,
-    "supportingReviewIds": [
-      "appstore_in_14458293250",
-      "appstore_in_14458396582"
-    ]
+    "answer": "Consistent unmet needs include the desire for more accurate product representations, better size and fit guidance, and improved customer service. Users also express a need for more reliable pricing and availability information, as well as enhanced app functionality to streamline the shopping experience.",
+    "confidence": 0.8
   }
 ]

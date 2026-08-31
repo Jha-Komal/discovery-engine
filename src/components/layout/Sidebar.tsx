@@ -2,15 +2,15 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, MessageSquareText, Lightbulb, Target, ListChecks } from 'lucide-react';
+import { LayoutDashboard, MessageSquareText, Lightbulb, FileText, ListChecks } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const NAV_ITEMS = [
   { href: '/', label: 'Dashboard', icon: LayoutDashboard },
-  { href: '/reviews', label: 'Reviews', icon: MessageSquareText },
   { href: '/insights', label: 'Insights', icon: Lightbulb },
-  { href: '/opportunities', label: 'Opportunities', icon: Target },
+  { href: '/research-report', label: 'Research Report', icon: FileText },
   { href: '/recommendations', label: 'Recommendations', icon: ListChecks },
+  { href: '/reviews', label: 'Reviews', icon: MessageSquareText },
 ];
 
 export function Sidebar() {

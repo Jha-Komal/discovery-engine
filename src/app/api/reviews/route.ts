@@ -7,8 +7,8 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url);
     const source = searchParams.get('source');
     const sentiment = searchParams.get('sentiment');
-    const wishlistIntent = searchParams.get('wishlistIntent');
-    const theme = searchParams.get('theme');
+    const relevanceClass = searchParams.get('relevanceClass');
+    const purchaseIntent = searchParams.get('purchaseIntent');
     const keyword = searchParams.get('keyword')?.toLowerCase();
     const page = parseInt(searchParams.get('page') || '1', 10);
     const limit = Math.min(parseInt(searchParams.get('limit') || '25', 10), 100);
@@ -16,9 +16,9 @@ export async function GET(request: NextRequest) {
     let reviews = await getReviewsWithAnalysis();
 
     if (source) reviews = reviews.filter((r) => r.source === source);
-    if (sentiment) reviews = reviews.filter((r) => r.analysis?.sentiment === sentiment);
-    if (wishlistIntent) reviews = reviews.filter((r) => r.analysis?.wishlistIntent === wishlistIntent);
-    if (theme) reviews = reviews.filter((r) => r.analysis?.themes.includes(theme));
+    if (sentiment) reviews = reviews.filter((r) => r.analysis?.sentiment.overall.toLowerCase() === sentiment);
+    if (relevanceClass) reviews = reviews.filter((r) => r.analysis?.relevance.class === relevanceClass);
+    if (purchaseIntent) reviews = reviews.filter((r) => r.analysis?.purchaseIntent.level === purchaseIntent);
     if (keyword) {
       reviews = reviews.filter(
         (r) => r.review.toLowerCase().includes(keyword) || r.title.toLowerCase().includes(keyword)

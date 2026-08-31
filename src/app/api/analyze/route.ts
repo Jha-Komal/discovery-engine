@@ -10,8 +10,7 @@ export async function POST() {
     'loading',
     'analyzing',
     'aggregating',
-    'generating_insights',
-    'generating_opportunities',
+    'generating_research_report',
     'generating_recommendations',
   ];
 

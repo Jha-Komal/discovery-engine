@@ -1,7 +1,8 @@
 import { Badge } from '@/components/ui/badge';
-import type { Sentiment } from '@/lib/types';
+import type { OverallSentiment } from '@/lib/types';
 
-export function SentimentBadge({ sentiment }: { sentiment: Sentiment }) {
-  const variant = sentiment === 'positive' ? 'positive' : sentiment === 'negative' ? 'negative' : 'neutral';
-  return <Badge variant={variant}>{sentiment}</Badge>;
+export function SentimentBadge({ sentiment }: { sentiment: OverallSentiment }) {
+  const variant =
+    sentiment === 'POSITIVE' ? 'positive' : sentiment === 'NEGATIVE' ? 'negative' : sentiment === 'MIXED' ? 'default' : 'neutral';
+  return <Badge variant={variant}>{sentiment.toLowerCase()}</Badge>;
 }

@@ -6,8 +6,7 @@ const ACTIVE_STATUSES = new Set([
   'loading',
   'analyzing',
   'aggregating',
-  'generating_insights',
-  'generating_opportunities',
+  'generating_research_report',
   'generating_recommendations',
 ]);
 

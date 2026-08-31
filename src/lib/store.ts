@@ -6,7 +6,7 @@ import type {
   ReviewAnalysis,
   AggregationStats,
   Insight,
-  OpportunityArea,
+  ResearchReport,
   Recommendation,
   StatusState,
 } from './types';
@@ -18,7 +18,7 @@ const FILES = {
   analysis: 'analysis.json',
   aggregation: 'aggregation.json',
   insights: 'insights.json',
-  opportunities: 'opportunities.json',
+  researchReport: 'researchReport.json',
   recommendations: 'recommendations.json',
   status: 'status.json',
 } as const;
@@ -87,14 +87,14 @@ export async function saveInsights(insights: Insight[]): Promise<void> {
   await writeJson(FILES.insights, insights);
 }
 
-// --- Opportunities -----------------------------------------------------------
+// --- Research report -----------------------------------------------------------
 
-export async function getOpportunities(): Promise<OpportunityArea[]> {
-  return readJson<OpportunityArea[]>(FILES.opportunities, []);
+export async function getResearchReport(): Promise<ResearchReport | null> {
+  return readJson<ResearchReport | null>(FILES.researchReport, null);
 }
 
-export async function saveOpportunities(opportunities: OpportunityArea[]): Promise<void> {
-  await writeJson(FILES.opportunities, opportunities);
+export async function saveResearchReport(report: ResearchReport): Promise<void> {
+  await writeJson(FILES.researchReport, report);
 }
 
 // --- Recommendations -----------------------------------------------------------

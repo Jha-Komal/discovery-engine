@@ -4,8 +4,7 @@ import type { AggregationStats } from '@/lib/types';
 
 export interface DashboardData {
   stats: AggregationStats | null;
-  insightsCount: number;
-  opportunitiesCount: number;
+  reportGeneratedAt: string | null;
   recommendationsCount: number;
 }
 

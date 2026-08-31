@@ -3,8 +3,8 @@
  *
  * Rules applied, in order:
  *   1. Strip HTML tags, collapse whitespace.
- *   2. Drop empty / stars-only / numbers-only reviews.
- *   3. Drop reviews under MIN_LENGTH characters (after cleaning).
+ *   2. Drop empty / stars-only / numbers-only / emoji-only reviews.
+ *   3. Drop reviews with MIN_LENGTH characters or fewer (after cleaning).
  *   4. Drop reviews written in Hindi (Devanagari script).
  *   5. Deduplicate by (source + lowercased text).
  *
@@ -19,10 +19,19 @@ import { stringify } from 'csv-stringify/sync';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = join(__dirname, '..', 'data');
 const REFINED_DIR = join(__dirname, '..', 'refined-data');
-const MIN_LENGTH = 10;
+// "more than 25 characters" — text.length must be > 25, i.e. >= 26.
+const MIN_LENGTH = 26;
 
 // Devanagari Unicode block (U+0900–U+097F) covers Hindi, Marathi, etc.
 const DEVANAGARI_RE = /[ऀ-ॿ]/;
+
+// \p{Extended_Pictographic} covers emoji glyphs; skin-tone modifiers, the
+// zero-width joiner, and the emoji variation selector ride alongside a base
+// emoji but aren't matched by that property on their own, so they're added
+// explicitly.
+const EMOJI_CLASS = '\\p{Extended_Pictographic}\\u{1F3FB}-\\u{1F3FF}\\u{200D}\\u{FE0F}';
+const EMOJI_RE_GLOBAL = new RegExp(`[${EMOJI_CLASS}]`, 'gu');
+const EMOJI_RE_TEST = new RegExp(`[${EMOJI_CLASS}]`, 'u');
 
 function stripHtml(text) {
   return text.replace(/<[^>]*>/g, '');
@@ -34,6 +43,12 @@ function collapseWhitespace(text) {
 
 function isOnlyStarsOrNumbersOrPunctuation(text) {
   return /^[\d\s★☆*.,!?\-_'"()]+$/.test(text);
+}
+
+function isOnlyEmoji(text) {
+  if (!EMOJI_RE_TEST.test(text)) return false;
+  const withoutEmoji = text.replace(EMOJI_RE_GLOBAL, '').replace(/[\s★☆*.,!?\-_'"()]+/g, '');
+  return withoutEmoji.length === 0;
 }
 
 function isHindi(text) {
@@ -61,6 +76,7 @@ function cleanCsvFile(filename) {
   const counts = {
     total: records.length,
     empty: 0,
+    emojiOnly: 0,
     tooShort: 0,
     hindi: 0,
     duplicate: 0,
@@ -75,6 +91,11 @@ function cleanCsvFile(filename) {
 
     if (!text || isOnlyStarsOrNumbersOrPunctuation(text)) {
       counts.empty++;
+      continue;
+    }
+
+    if (isOnlyEmoji(text)) {
+      counts.emojiOnly++;
       continue;
     }
 
@@ -131,7 +152,8 @@ function main() {
     console.log(`${filename}`);
     console.log(`  total:      ${counts.total}`);
     console.log(`  removed empty/stars-only: ${counts.empty}`);
-    console.log(`  removed <${MIN_LENGTH} chars:     ${counts.tooShort}`);
+    console.log(`  removed emoji-only:       ${counts.emojiOnly}`);
+    console.log(`  removed <=${MIN_LENGTH} chars:    ${counts.tooShort}`);
     console.log(`  removed Hindi:            ${counts.hindi}`);
     console.log(`  removed duplicates:       ${counts.duplicate}`);
     console.log(`  kept:                     ${counts.kept}`);
@@ -142,21 +164,23 @@ function main() {
     (acc, s) => ({
       total: acc.total + s.total,
       empty: acc.empty + s.empty,
+      emojiOnly: acc.emojiOnly + s.emojiOnly,
       tooShort: acc.tooShort + s.tooShort,
       hindi: acc.hindi + s.hindi,
       duplicate: acc.duplicate + s.duplicate,
       kept: acc.kept + s.kept,
     }),
-    { total: 0, empty: 0, tooShort: 0, hindi: 0, duplicate: 0, kept: 0 }
+    { total: 0, empty: 0, emojiOnly: 0, tooShort: 0, hindi: 0, duplicate: 0, kept: 0 }
   );
 
   console.log('=== Overall ===');
-  console.log(`Total input rows:   ${totals.total}`);
-  console.log(`Removed (empty):    ${totals.empty}`);
-  console.log(`Removed (<${MIN_LENGTH} chars): ${totals.tooShort}`);
-  console.log(`Removed (Hindi):    ${totals.hindi}`);
-  console.log(`Removed (dupes):    ${totals.duplicate}`);
-  console.log(`Kept:               ${totals.kept}`);
+  console.log(`Total input rows:    ${totals.total}`);
+  console.log(`Removed (empty):     ${totals.empty}`);
+  console.log(`Removed (emoji-only):${totals.emojiOnly}`);
+  console.log(`Removed (<=${MIN_LENGTH} chars): ${totals.tooShort}`);
+  console.log(`Removed (Hindi):     ${totals.hindi}`);
+  console.log(`Removed (dupes):     ${totals.duplicate}`);
+  console.log(`Kept:                ${totals.kept}`);
   console.log(`\nWritten to ${REFINED_DIR}`);
 }
 

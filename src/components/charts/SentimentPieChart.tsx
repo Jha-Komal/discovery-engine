@@ -7,21 +7,25 @@ const COLORS: Record<string, string> = {
   Positive: 'var(--positive)',
   Neutral: 'var(--neutral)',
   Negative: 'var(--negative)',
+  Mixed: 'var(--myntra-orange)',
 };
 
 export function SentimentPieChart({
   positive,
   neutral,
   negative,
+  mixed = 0,
 }: {
   positive: number;
   neutral: number;
   negative: number;
+  mixed?: number;
 }) {
   const data = [
     { name: 'Positive', value: positive },
     { name: 'Neutral', value: neutral },
     { name: 'Negative', value: negative },
+    { name: 'Mixed', value: mixed },
   ].filter((d) => d.value > 0);
 
   return (

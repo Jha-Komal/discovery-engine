@@ -18,7 +18,8 @@ export function ReviewTable({
             <th className="px-4 py-3">Rating</th>
             <th className="px-4 py-3">Review</th>
             <th className="px-4 py-3">Sentiment</th>
-            <th className="px-4 py-3">Wishlist Intent</th>
+            <th className="px-4 py-3">Relevance</th>
+            <th className="px-4 py-3">Purchase Intent</th>
             <th className="px-4 py-3">Date</th>
           </tr>
         </thead>
@@ -35,9 +36,10 @@ export function ReviewTable({
               <td className="px-4 py-3 text-muted">{review.rating ?? '—'}</td>
               <td className="max-w-md truncate px-4 py-3 text-foreground">{review.review}</td>
               <td className="px-4 py-3">
-                {review.analysis ? <SentimentBadge sentiment={review.analysis.sentiment} /> : '—'}
+                {review.analysis ? <SentimentBadge sentiment={review.analysis.sentiment.overall} /> : '—'}
               </td>
-              <td className="px-4 py-3 text-muted">{review.analysis?.wishlistIntent ?? '—'}</td>
+              <td className="px-4 py-3 text-muted">{review.analysis?.relevance.class ?? '—'}</td>
+              <td className="px-4 py-3 text-muted">{review.analysis?.purchaseIntent.level ?? '—'}</td>
               <td className="px-4 py-3 whitespace-nowrap text-muted">
                 {review.reviewDate ? new Date(review.reviewDate).toLocaleDateString() : '—'}
               </td>

@@ -1,908 +1,2421 @@
 {
-  "totalCount": 2537,
-  "analyzedCount": 1298,
-  "positiveCount": 619,
-  "neutralCount": 120,
-  "negativeCount": 559,
-  "averageRating": 3.898727465535525,
+  "totalCount": 2055,
+  "analyzedCount": 2044,
+  "averageRating": 3.5199430199430197,
   "sourceDistribution": {
-    "app_store": 618,
-    "consumer_complaints": 508,
-    "play_store": 1248,
-    "reddit": 163
+    "app_store": 494,
+    "consumer_complaints": 507,
+    "play_store": 890,
+    "reddit": 164
   },
-  "themeFrequency": {
-    "app_usability": 317,
-    "product_quality": 469,
-    "delivery": 206,
-    "authenticity": 42,
-    "returns": 240,
-    "customer_service": 310,
-    "sizing": 28,
-    "service": 16,
-    "pricing": 52,
-    "fit": 5,
-    "order_management": 13,
-    "trust": 22,
-    "wishlist": 8,
-    "occasion": 6,
-    "styling": 22,
-    "logistics": 2,
-    "variety": 1,
-    "refunds": 2,
-    "payment": 19,
-    "customer_support": 14,
-    "account_management": 7,
-    "refund": 2,
-    "order_cancellation": 2,
-    "order_confirmation": 1,
-    "payments": 1,
-    "order_status": 3,
-    "account_issue": 1,
-    "account_access": 1,
-    "communication": 1,
-    "brand_trust": 2,
-    "packaging": 2,
-    "transparency": 1,
-    "trends": 1,
-    "gift_shopping": 1,
-    "product_suggestion": 1,
-    "product_comparison": 2,
-    "social_validation": 1
+  "relevanceClassDistribution": {
+    "GENERAL_ECOMMERCE": 1647,
+    "ADJACENT_DECISION": 26,
+    "IRRELEVANT": 350,
+    "DIRECT_WISHLIST": 21
   },
-  "painPointFrequency": {
-    "faulty product": 1,
-    "poor customer service": 53,
-    "no refund option": 1,
-    "difficulty finding natural fabrics": 1,
-    "no refund received": 2,
-    "robotic customer support": 1,
-    "automatic cancellation after purchase": 1,
-    "no reason given for cancellation": 1,
-    "size issue": 7,
-    "items not delivered": 1,
-    "slow refund process": 1,
-    "technical issues": 1,
-    "slow server": 1,
-    "bad discounts": 1,
-    "high platform fee": 2,
-    "return process issues": 6,
-    "size issues": 3,
+  "journeyStageFrequency": {
+    "discovery/browsing": 139,
+    "product evaluation": 81,
+    "checkout": 180,
+    "returns/exchange": 223,
+    "post-purchase": 74,
+    "purchase consideration": 186,
+    "delivery": 44,
+    "unknown": 59,
+    "wishlist/save": 18,
+    "customer service": 1,
+    "shortlist/comparison": 1,
+    "social validation": 1
+  },
+  "wishlistJobCategoryDistribution": {
+    "waiting to make a decision": 1,
+    "genuine intention to buy later": 58,
+    "bookmarking for future reference": 5,
+    "comparing alternatives": 1,
+    "sharing/seeking validation": 1,
+    "waiting for an occasion": 2
+  },
+  "wishlistJobCategoryByRelevanceClass": {
+    "waiting to make a decision": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "genuine intention to buy later": {
+      "DIRECT_WISHLIST": 6,
+      "ADJACENT_DECISION": 8,
+      "GENERAL_ECOMMERCE": 44,
+      "IRRELEVANT": 0
+    },
+    "bookmarking for future reference": {
+      "DIRECT_WISHLIST": 2,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 3,
+      "IRRELEVANT": 0
+    },
+    "comparing alternatives": {
+      "DIRECT_WISHLIST": 1,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "sharing/seeking validation": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "waiting for an occasion": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    }
+  },
+  "purchaseIntentDistribution": {
+    "UNKNOWN": 1277,
+    "HIGH": 294,
+    "LOW": 437,
+    "MEDIUM": 36
+  },
+  "purchaseIntentByRelevanceClass": {
+    "UNKNOWN": {
+      "DIRECT_WISHLIST": 6,
+      "ADJACENT_DECISION": 6,
+      "GENERAL_ECOMMERCE": 924,
+      "IRRELEVANT": 341
+    },
+    "HIGH": {
+      "DIRECT_WISHLIST": 7,
+      "ADJACENT_DECISION": 4,
+      "GENERAL_ECOMMERCE": 283,
+      "IRRELEVANT": 0
+    },
+    "LOW": {
+      "DIRECT_WISHLIST": 7,
+      "ADJACENT_DECISION": 4,
+      "GENERAL_ECOMMERCE": 417,
+      "IRRELEVANT": 9
+    },
+    "MEDIUM": {
+      "DIRECT_WISHLIST": 1,
+      "ADJACENT_DECISION": 12,
+      "GENERAL_ECOMMERCE": 23,
+      "IRRELEVANT": 0
+    }
+  },
+  "barrierCategoryFrequency": {
+    "customer_service": 1,
+    "quality_uncertainty": 1,
+    "material/fabric uncertainty": 2,
+    "authenticity/trust": 135,
+    "fit uncertainty": 20,
+    "delivery timing": 225,
+    "returns/exchange friction": 227,
+    "insufficient product information": 10,
+    "customer service": 145,
+    "size uncertainty": 10,
+    "inventory/size availability": 14,
+    "quality uncertainty": 102,
+    "service quality": 4,
+    "trust": 13,
+    "customer support": 67,
+    "account access": 3,
+    "refund process": 2,
+    "product quality": 4,
     "exchange process": 1,
-    "limited catalog availability": 1,
-    "app malfunction": 2,
-    "long delivery time": 3,
-    "lack of accountability": 2,
-    "poor system": 1,
-    "poor quality of brands": 1,
-    "poor service": 15,
-    "poor product quality": 13,
-    "poor delivery services": 1,
-    "terrible delivery partners": 1,
-    "products getting canceled after shipping": 1,
-    "poor delivery experience": 1,
-    "wrong product received": 7,
-    "unhelpful customer support": 5,
-    "app glitches": 1,
-    "significant inconvenience": 1,
-    "lack of helpful updates": 1,
-    "difficult return process": 9,
-    "unresponsive customer service": 5,
-    "account log out": 1,
-    "fake products": 3,
-    "poor customer support": 43,
-    "return issues": 3,
-    "long delivery times": 1,
-    "order cancellations": 6,
-    "incomplete products": 1,
-    "incorrect products": 1,
-    "return request rejection": 1,
-    "pickup issues": 2,
-    "account deactivation": 5,
-    "delayed delivery": 20,
-    "lack of communication": 28,
-    "complicated return policy": 2,
-    "delayed resolution": 1,
-    "wrong item sent": 1,
-    "poor return process": 5,
-    "exchange process complications": 2,
-    "lack of proof of delivery": 1,
-    "poor resolution process": 2,
-    "lost orders": 1,
-    "system errors": 1,
-    "unresponsive support": 1,
-    "received wrong item": 14,
-    "trust issues with delivery": 2,
-    "unable to log in": 1,
-    "sizes going out of stock": 1,
-    "exchange not processed": 1,
-    "exchange rejected": 1,
-    "poor communication": 15,
-    "defective product": 6,
-    "missing items": 2,
-    "confusing return policy": 1,
-    "multiple wrong products received": 1,
-    "order not delivered": 2,
-    "delayed refund": 6,
-    "unprofessional handling of returns": 1,
-    "lost product": 1,
-    "unresolved complaints": 3,
-    "poor tracking": 3,
-    "size exchange issues": 2,
-    "lack of clear information": 1,
-    "order cancellation": 10,
-    "lack of clear communication": 2,
-    "automatic order cancellation": 1,
-    "lack of clear policies": 1,
-    "no pickup service": 1,
-    "unhelpful customer service": 5,
-    "wrong product delivery": 2,
-    "delayed shipping": 1,
-    "poor service quality": 1,
-    "slow performance on lower-end devices": 1,
-    "occasional glitches": 1,
-    "partial refund": 2,
-    "unclear return policy": 2,
-    "misleading information": 1,
-    "poor support": 2,
-    "delivery issues": 3,
-    "failed delivery attempts": 1,
-    "cancellation without reason": 1,
-    "lack of trust": 1,
-    "poor handling of returns": 2,
-    "account deactivation issues": 1,
-    "lack of tracking updates": 1,
-    "undelivered product": 1,
-    "incomplete order": 2,
-    "product tampering accusations": 1,
-    "canceled orders": 3,
-    "inconsistent delivery dates": 1,
-    "wrong item picked up": 1,
-    "late delivery": 2,
-    "unreachable delivery executive": 1,
-    "complicated return procedures": 1,
-    "received used product": 1,
-    "lack of response from customer service": 5,
-    "unresolved refund issues": 1,
-    "unreachable customer service": 1,
-    "received wrong size": 1,
-    "missing MRP tag": 1,
-    "poor delivery attempts": 1,
-    "ignored requests": 1,
-    "poor packaging": 4,
-    "no brand identification": 1,
-    "unresolved issues": 2,
-    "disconnected calls": 1,
-    "rude customer service": 1,
-    "poor delivery service": 7,
-    "wrong product": 1,
-    "quality issues": 1,
-    "received defective product": 5,
-    "confusing navigation": 1,
-    "lack of categories": 1,
-    "app crashes": 2,
-    "inefficient return process": 1,
-    "wrong shade ordered": 1,
-    "confusing exchange policy": 1,
-    "order cancellation without notification": 1,
-    "unhelpful compensation": 1,
-    "undelivered orders": 4,
-    "slow delivery": 2,
-    "lack of resolution": 17,
-    "wishlist visibility": 1,
-    "misleading customer support": 1,
-    "incorrect size": 2,
-    "return request cancellation": 1,
-    "refund delay": 1,
-    "poor resolution from customer service": 1,
-    "lack of refund": 4,
-    "exchange service unavailable": 1,
-    "return request issues": 1,
-    "wrong product delivered": 13,
-    "poor chat support": 1,
-    "feedback not approved": 1,
-    "rude delivery agent": 1,
-    "no response from customer support": 1,
-    "misbehavior of delivery staff": 1,
-    "payment issues": 4,
-    "wrong items received": 1,
-    "lack of refunds": 1,
-    "last mile delivery issues": 1,
-    "lack of control over pickup timing": 1,
-    "unable to cancel refund request": 1,
-    "self-shipping requirement for returns": 1,
-    "poor return pickup experience": 1,
-    "inconsistency in product descriptions": 1,
-    "sizing details": 1,
-    "frequent order errors": 1,
-    "delivery agent unresponsive": 1,
-    "limited payment options": 1,
-    "exhausted cash on delivery limit": 1,
-    "fake delivery attempts": 2,
-    "lack of resolution from customer support": 1,
-    "fit issues with shoes": 1,
-    "poor pickup experience": 1,
-    "lack of customer support": 4,
-    "poor quality": 3,
-    "return pickup rejection": 1,
-    "wrong item delivered": 4,
-    "confusing return process": 1,
-    "app lag": 1,
-    "damaged product": 2,
-    "delayed replacement": 1,
-    "unresponsive channels": 1,
-    "unhelpful agents": 1,
-    "delayed return pickup": 3,
-    "non-delivery of order": 1,
-    "lack of explanation": 1,
-    "confusion about delivery status": 1,
-    "delay in return process": 1,
-    "undeliverable pincode": 1,
-    "service availability at address": 1,
-    "lack of communication from Myntra": 1,
-    "received wrong product": 11,
-    "declined return request": 1,
-    "missing package": 1,
-    "quality check issues": 1,
-    "delay in refund process": 1,
-    "lack of solution offered": 1,
-    "mishandling by Myntra": 1,
-    "broken seal and missing item": 1,
-    "return status not updated": 2,
-    "refund not initiated": 1,
-    "received counterfeit product": 1,
-    "model mismatch": 1,
-    "pickup denial due to used product claim": 1,
-    "received an unidentified parcel": 1,
-    "rejected claim request": 1,
-    "received wrong shoes": 1,
-    "failure to deliver products": 1,
-    "deficiency in service": 1,
-    "return request denied": 1,
-    "lack of valid reason for return denial": 1,
-    "lack of desired features": 1,
-    "fit issue": 1,
-    "plus size problem": 1,
-    "no delivery available for pincode": 1,
-    "confusion over delivery restrictions": 1,
-    "lack of resolution from customer service": 2,
-    "repeated scripted responses": 1,
-    "product not as described": 1,
-    "lack of resolution for orders": 1,
-    "no order confirmation despite payment": 1,
-    "received wrong color": 2,
-    "need to confirm color before reordering": 1,
-    "invalid gift card": 1,
-    "received fake product": 2,
-    "poor refund process": 1,
-    "pickup process not completed": 1,
-    "pending refund": 1,
-    "mis-sold products": 1,
-    "received wrong brand": 4,
-    "order not showing after payment": 1,
-    "price discrepancy": 1,
-    "denied promotional discount": 1,
-    "unsatisfactory customer support": 1,
-    "empty package": 1,
-    "slow response to complaints": 1,
-    "missing tax invoice": 1,
-    "order cancellation after payment": 1,
-    "vague technical issues": 1,
-    "account deactivation without notice": 1,
-    "lack of support": 9,
-    "international order complications": 1,
-    "communication issues": 1,
-    "failed pickup attempts": 2,
-    "deactivated account with credits": 1,
-    "wrong item received": 5,
-    "slow complaint resolution": 1,
-    "no price tag": 1,
-    "return not accepted": 1,
-    "refund not received": 2,
-    "amount not received": 1,
-    "product failed to deliver": 1,
-    "cancellation not allowed": 1,
-    "customer support unresponsive": 1,
-    "missing invoice": 1,
-    "no response from customer service": 3,
-    "wrong size received": 1,
-    "no tag for return": 1,
-    "lack of tracking details": 1,
-    "refund delays": 1,
-    "suspected fraud": 2,
-    "repeated delays": 1,
-    "inability to cancel order": 1,
-    "refund not credited": 1,
-    "package not delivered despite being marked as delivered": 1,
-    "lack of accountability in delivery": 1,
-    "no proof of delivery": 1,
-    "ignored complaints": 1,
-    "financial loss": 3,
-    "mental stress": 1,
-    "received a used product": 1,
-    "wrong address claim": 1,
-    "order marked as delivered but not received": 3,
-    "no product received": 1,
-    "no refund": 2,
-    "delivery failed": 2,
-    "unresolved issue with order": 1,
-    "lack of follow-up": 1,
-    "received product without brand tag": 1,
-    "need for return": 1,
-    "order cancellation without notice": 1,
-    "price increase after cancellation": 2,
-    "serious issue with order": 1,
-    "lack of response": 3,
-    "misbehavior from support": 1,
-    "no refund provided": 2,
-    "shipping delay": 1,
-    "lack of updates": 3,
-    "missing item": 3,
-    "leaking product": 1,
-    "tampered product": 1,
-    "lack of acknowledgment": 1,
-    "exchange not delivered": 1,
-    "confusion during delivery": 1,
-    "incorrect transaction ID": 1,
-    "lack of action": 1,
-    "expired product": 1,
-    "skin infection": 1,
-    "non-delivered order": 1,
-    "received empty box": 1,
-    "received incorrect item": 2,
-    "wrong color delivered": 4,
-    "exchange denied": 1,
-    "dirty product received": 1,
-    "lack of response from support": 1,
-    "multiple follow-ups needed": 1,
-    "no delivery of exchanged item": 1,
-    "order cancellation without resolution": 1,
-    "delayed refund process": 2,
-    "lack of response from customer support": 1,
-    "missing items in delivery": 1,
-    "inconsistent delivery service": 3,
-    "unprofessional behavior from delivery agent": 1,
-    "key feature missing": 1,
-    "lack of resolution for return request": 1,
-    "not receiving ordered item": 1,
-    "did not like the product": 1,
-    "unethical behavior of delivery agent": 1,
-    "lack of confirmation slip": 1,
-    "incomplete delivery": 1,
-    "bad customer service": 2,
-    "item looked used": 1,
-    "orders canceled without notice": 1,
-    "repeated issues": 1,
-    "received a used gift card": 1,
-    "order canceled without reason": 1,
-    "missing item from package": 1,
-    "loss of money": 1,
-    "damaged packaging": 1,
-    "size did not fit": 1,
-    "pickup marked as failed despite evidence": 1,
-    "fraud allegations": 1,
-    "received wrong items": 2,
-    "substandard quality": 1,
-    "bad experience": 2,
-    "money deducted without order confirmation": 1,
-    "delayed return requests": 1,
-    "canceled requests": 1,
-    "received damaged product": 2,
-    "poor product matching": 1,
-    "received wrong model": 1,
-    "refusal to exchange": 1,
-    "cancellation without notice": 1,
-    "price increase": 1,
-    "wrong delivery date": 1,
-    "no one available to receive package": 1,
-    "appalling service": 1,
-    "rude delivery person": 1,
-    "refund issues": 2,
-    "rescheduling pickup": 1,
-    "received wrong and defective product": 1,
-    "mental harassment": 1,
-    "payment gateway issues": 1,
-    "transaction failures": 1,
-    "repeated unresolved issues": 1,
-    "lack of timely responses": 1,
-    "poor quality control": 1,
-    "delivery issues at specific pincode": 1,
-    "lack of service consistency": 1,
-    "payment not credited": 1,
-    "rejected pickup": 2,
-    "lack of refund processing": 1,
-    "pickup denial": 1,
-    "near expiry product": 1,
-    "no return or refund process": 1,
-    "exchange not shipped": 1,
-    "unable to cancel exchange": 1,
-    "unable to delete account": 1,
-    "no prior notice for suspension": 1,
-    "hassle-free return process not available": 1,
-    "delivery not available at pin code": 1,
-    "unable to get support for in-transit items": 1,
-    "poor customer service for returns": 1,
-    "order canceled without explanation": 1,
-    "payment details not updated": 1,
-    "order not placed": 1,
-    "poor communication about order status": 1,
-    "double payment deduction": 2,
-    "credit expiration policy confusion": 1,
-    "exchange process issues": 1,
-    "mismatched tag scanning": 1,
-    "order not placed despite payment": 1,
-    "cash on delivery not available": 1,
-    "exchange refusal due to missing tags": 1,
-    "inconsistent delivery times": 1,
-    "product description accuracy": 1,
-    "wrong items delivered": 1,
-    "product images do not match": 1,
-    "wrong pickup status": 1,
-    "pickup marked as failed": 1,
-    "lack of support from customer care": 1,
-    "delayed return process": 1,
-    "delivery failed messages": 1,
-    "no return agent": 1,
-    "delivery person not coming": 1,
-    "delayed response from support": 1,
-    "wrong product picked up": 1,
-    "items marked as delivered but not received": 1,
-    "lack of support response": 1,
-    "sudden stop of delivery to pincode": 1,
-    "poor return service": 3,
-    "lack of return support": 1,
-    "payment deducted twice": 1,
-    "faded color and worn-out appearance": 1,
-    "request for refund": 1,
-    "no update on order status": 1,
-    "order not shipped": 1,
-    "request cancelled": 1,
-    "no return option": 1,
-    "lack of response from customer care": 1,
-    "order stuck in warehouse": 1,
-    "missing tag for return": 1,
-    "loss due to missing tag": 1,
-    "order marked as delivered incorrectly": 1,
-    "lack of refund or product": 1,
-    "lack of communication from delivery executive": 1,
-    "lack of communication from delivery guy": 1,
-    "order cancelled": 1,
-    "delay in delivery": 1,
-    "product mismatch": 1,
-    "package tampering": 1,
-    "missing bill": 1,
-    "poor return policy": 1,
-    "unhelpful delivery personnel": 1,
-    "lack of resolution for refund": 1,
-    "loss of trust in the brand": 1,
-    "poor incident handling": 1,
-    "refund not processed": 1,
-    "poor quality check process": 1,
-    "payment not reflected": 1,
-    "lack of immediate resolution": 1,
-    "product material dissatisfaction": 1,
-    "urgent delivery request": 1,
-    "tight fit of shoes": 1,
-    "delayed exchange process": 1,
-    "cancellation of orders": 2,
-    "confusing pricing structure": 1,
-    "inability to track pickup": 1,
-    "double deduction of payment": 1,
-    "failed transaction": 1,
-    "missing price tag issue": 1,
-    "poor support response": 1,
-    "sudden delivery issue": 1,
-    "refund not visible": 1,
-    "lack of clarity on credits": 1,
-    "size not suitable": 1,
-    "product quality concern": 1,
-    "item not deliverable": 1,
-    "poor replacement process": 1,
-    "size too large": 1,
-    "lack of delivery confirmation": 1,
-    "late delivery affecting exchange period": 1,
-    "order history not visible": 1,
-    "unable to raise return request": 1,
-    "order not visible after payment": 1,
-    "order not showing": 1,
-    "slow resolution of delivery issues": 1,
-    "lack of response from Myntra": 1,
-    "money credited to Myntra credits instead of bank account": 1,
-    "difficulty redeeming credits": 1,
-    "fit issues leading to replacement": 1,
-    "product quality issues": 1,
-    "missing product": 1,
-    "lack of support from Myntra": 1,
-    "repeated issues with customer service": 1,
-    "delay in pickup": 1,
-    "poor management": 1,
-    "ruined special occasion": 1,
-    "received product without tags": 1,
-    "non-delivery of products": 1,
-    "deceitful practices": 1,
-    "fit issues": 2,
-    "cancellation of items": 1,
-    "shipping delays": 1,
-    "failed return pickup": 1,
-    "package delivered to wrong person": 1,
-    "lack of confirmation": 1,
-    "dissatisfaction with replacement process": 1,
-    "loss of rewards": 1,
-    "inconsistent return process": 1,
-    "shipping issues to pincode": 1,
-    "lack of information": 1,
-    "color mismatch": 1,
-    "return rejection": 1,
-    "stopped delivery to pincode": 1,
-    "expired credits": 1,
-    "lack of notification": 1,
-    "missing products": 2,
-    "quality check not performed": 1,
-    "product condition uncertainty": 1,
-    "product quality concerns": 1,
-    "careless handling of issues": 1,
-    "unsatisfactory purchase experience": 1,
-    "no resolution": 1,
-    "repeated failed pickup attempts": 1,
-    "poor return assistance": 1,
-    "no order confirmation": 1,
-    "lack of order details": 1,
-    "ignored customer service requests": 1,
-    "unable to get refund": 1,
-    "unable to exchange size": 1,
-    "poor customer service response": 1,
-    "multiple return cancellations": 1,
-    "unable to exchange jeans": 1,
-    "inconsistent delivery policies": 1,
-    "item marked as delivered but not received": 1,
-    "partial refund received": 1,
-    "poor customer service communication": 1,
-    "delivery stopped to pincode": 1,
-    "lack of alternate options": 1,
-    "payment made before delivery": 1,
-    "uncertainty about order status": 2,
-    "difficulty in returning items": 1,
-    "no refund after return": 1,
-    "uncertainty about refund": 1,
-    "pickup refusal": 1,
-    "order cancellation without refund": 1,
-    "money deducted but no purchase confirmation": 1,
-    "lack of proper response for refund": 1,
-    "no transaction ID provided": 1,
-    "incorrect refund amount provided": 1,
-    "repeated failed return attempts": 1,
-    "poor handling of grievances": 1,
-    "legal complaint against Myntra": 1,
-    "received wrong design": 1,
-    "rejected return requests": 2,
-    "poor quality of exchange product": 1,
-    "no return option provided": 1,
-    "poor handling of order issues": 1,
-    "unable to log in to account": 1,
-    "fake products being sold": 1,
-    "incorrect product details": 1,
-    "decision-making between products": 1,
-    "lack of assistance": 1,
-    "received broken item": 1,
-    "no return option available": 1,
-    "unfulfilled promises": 1,
-    "charged for gift wrapping": 1,
-    "investigation delays": 1,
-    "login issues": 1,
-    "OTP problems": 1,
-    "failed delivery": 2,
-    "limited refund options": 1,
-    "orders cancelled without reason": 2,
-    "cash on delivery option not available": 1,
-    "unresolved complaint": 1,
-    "account suspension affecting returns": 1,
-    "no refund initiated": 1,
-    "delivery agent marked item as delivered without contact": 1,
-    "overall dissatisfaction": 1,
-    "unclear use of Myntra credit": 1,
-    "lack of price tags": 1,
-    "approval for return not received": 1,
-    "delayed response": 1,
-    "unable to use wallet credits": 1,
-    "automatic cancellation without reason": 1,
-    "return rejected due to quality issues": 1,
-    "slow customer service response": 1,
-    "delayed pickup": 1,
-    "slow customer service": 1,
-    "issue resolution not effective": 1,
-    "basic and generic design": 1,
-    "cheap vibes": 1,
-    "no communication about order": 1,
-    "money not refunded": 1,
-    "delay in refund": 1,
-    "poor app performance": 1,
-    "missing loop tag": 1,
-    "refused pickup": 1,
-    "unexpected account deactivation": 1,
-    "broken product": 1,
-    "delivering wrong products": 1,
-    "return process gets hectic": 1,
-    "very bad service": 2,
-    "waste of money": 1,
-    "lack of price transparency": 1,
-    "confusing charge breakdown": 1,
-    "fake delivery updates": 1,
-    "delayed orders": 2,
-    "extra fees": 1,
-    "convenience fees": 1,
-    "return pick-up issues": 1,
-    "customer service unhelpfulness": 1,
-    "parcel not delivered": 1,
-    "difficulty reaching agents": 1,
-    "quality issue response": 1,
-    "minor shipping and delivery hiccups": 1,
-    "fit uncertainty": 2,
-    "high prices": 1,
-    "stopped giving mycash coupons": 1,
-    "fed up with AI model": 1,
-    "wrong size delivered": 1,
-    "exchange date after travel date": 1,
-    "high prices compared to competitors": 1,
-    "worst delivery service": 1,
-    "no support": 1,
-    "coupons only available for new accounts": 1,
-    "feeling cheated": 1,
-    "poor customer care support": 1,
-    "slow return process": 2,
-    "receiving used products": 1,
-    "delayed deliveries": 2,
-    "misleading delivery promises": 1,
-    "platform fee": 1,
-    "lack of action on return request": 1,
-    "no tracking option": 1,
-    "unable to contact support": 1,
-    "delayed order": 2,
-    "poor customer care": 3,
-    "no solutions provided": 1,
-    "worst app experience": 1,
-    "slow customer support": 1,
-    "difficult to reach support": 1,
-    "poor customer care experience": 1,
-    "unreliable service": 2,
-    "order cancellation on delivery date": 1,
-    "no delivery attempt": 1,
-    "wasted time": 1,
-    "MynCash not applying": 1,
-    "difficulty in exchange": 1,
-    "unresponsive customer support": 1,
-    "wrong delivery": 1,
-    "delivery delays": 2,
-    "high convenience fee": 1,
-    "high delivery fee": 1,
-    "orders not arriving": 1,
-    "status not updated": 1,
-    "pathetic experience": 1,
-    "wrong products": 1,
-    "unfriendly return policy": 1,
-    "useless customer support": 1,
-    "minimum order requirement": 1,
-    "cashback rewards not received": 1,
-    "order damaged in transit": 1,
-    "lack of communication about order cancellation": 1,
-    "return pickup issues": 1,
-    "bad service": 1,
-    "degrading delivery quality": 1,
-    "misbehavior of delivery partner": 1,
-    "poor communication regarding returns": 1,
-    "poor quality check": 1,
-    "long delivery delay": 1,
-    "lack of support post-delivery": 1,
-    "unable to see order": 1,
-    "poor shopping experience": 1,
-    "pending order for a month": 1,
-    "low quality app": 1,
-    "difficulty finding the right size": 1,
-    "poor fitting": 1,
-    "horrible customer service": 1,
-    "delivered wrong item": 1,
-    "poor exchange experience": 1,
-    "delivery always late": 1,
-    "recent orders cancelled": 1,
-    "order delay": 1,
-    "irrelevant AI responses": 1,
-    "lack of human assistance": 1,
-    "received expired product": 1,
-    "not receiving full refund": 1,
-    "received broken product": 1,
-    "no brand tags or price tag": 1,
-    "wrong products sent": 1,
-    "slow resolution": 1,
-    "delivery not on time": 1,
-    "unwanted order cancellations": 1,
-    "non-refundable fees": 1,
-    "scams": 1,
-    "not budget friendly": 1,
-    "poor app experience": 1,
-    "poor service response": 1,
-    "frequent delays in delivery": 1,
-    "poor automated service": 1,
-    "order delivery is delayed": 1,
-    "received a defective product": 1,
-    "account blocked": 1,
-    "unable to return or contact support": 1,
-    "limited collection": 1,
-    "incorrect product": 1,
-    "inconvenience from returns": 1,
-    "not receiving credits": 1,
-    "customer support issues": 1,
-    "order cancellation without reason": 1,
-    "poor quality of products": 3,
-    "size and return issues": 1,
-    "trust issues with dropshipping": 1,
-    "uncertainty about product quality": 1,
-    "use of AI images": 1,
-    "issues with product returns": 1,
-    "lost money due to scams": 1,
-    "trust issues": 1,
-    "lack of customer service": 1,
-    "previous negative experiences": 1,
-    "social validation concerns": 1,
-    "looking for good-quality workwear": 1,
-    "price sensitivity": 2,
-    "hard to maintain color": 1,
-    "transparent clothes": 1,
-    "finding affordable options": 1,
-    "AI pictures": 1,
-    "same dress at different rates": 1,
-    "poor fabric quality": 1,
-    "exhausting to scroll through options": 1,
-    "poor quality of fast fashion": 1,
-    "difficulty finding quality oversized t-shirts": 1,
-    "fit issues with oversized t-shirts": 1,
-    "uncertainty about which brand to choose": 1,
-    "cheap material": 1,
-    "unnecessary clutter in app": 1,
-    "issues regarding returns": 1,
-    "customer support concerns": 1,
-    "limited options within budget": 1,
-    "struggling to find the right fit": 1,
-    "styles looking more fitted than expected": 1,
-    "missed Myntra sales": 1,
-    "uncertainty about outfit's flattering appearance": 1,
-    "lack of uniqueness": 1,
-    "generic outfits": 1,
-    "unwanted criticism": 1,
-    "material smells weird": 1,
-    "waist is a little loose": 1,
-    "top develops 'jhol'": 1,
-    "can't find the top": 1,
-    "lack of variety in kurtis": 1
+    "app experience": 46,
+    "payment/checkout": 32,
+    "product information": 1,
+    "product authenticity": 3,
+    "order fulfillment": 10,
+    "customer safety": 1,
+    "price/value uncertainty": 21,
+    "authentication/technical issues": 1,
+    "returns/exchange": 25,
+    "trust/authenticity": 2,
+    "tracking uncertainty": 2,
+    "service issues": 1,
+    "timing/not urgent": 2,
+    "delivery reliability": 1,
+    "order cancellation": 2,
+    "order handling": 1,
+    "product accuracy": 1,
+    "customer rewards": 1,
+    "insufficient/poor images": 1,
+    "review credibility": 1,
+    "wishlist limit": 1,
+    "wishlist functionality": 1,
+    "quality": 1,
+    "variety uncertainty": 1,
+    "appearance/look uncertainty": 7,
+    "style/look uncertainty": 1
+  },
+  "barrierCategoryByRelevanceClass": {
+    "customer_service": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "quality_uncertainty": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "material/fabric uncertainty": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "authenticity/trust": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 134,
+      "IRRELEVANT": 0
+    },
+    "fit uncertainty": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 7,
+      "GENERAL_ECOMMERCE": 13,
+      "IRRELEVANT": 0
+    },
+    "delivery timing": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 225,
+      "IRRELEVANT": 0
+    },
+    "returns/exchange friction": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 227,
+      "IRRELEVANT": 0
+    },
+    "insufficient product information": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 10,
+      "IRRELEVANT": 0
+    },
+    "customer service": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 145,
+      "IRRELEVANT": 0
+    },
+    "size uncertainty": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 2,
+      "GENERAL_ECOMMERCE": 8,
+      "IRRELEVANT": 0
+    },
+    "inventory/size availability": {
+      "DIRECT_WISHLIST": 4,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 9,
+      "IRRELEVANT": 0
+    },
+    "quality uncertainty": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 3,
+      "GENERAL_ECOMMERCE": 99,
+      "IRRELEVANT": 0
+    },
+    "service quality": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 4,
+      "IRRELEVANT": 0
+    },
+    "trust": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 13,
+      "IRRELEVANT": 0
+    },
+    "customer support": {
+      "DIRECT_WISHLIST": 1,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 66,
+      "IRRELEVANT": 0
+    },
+    "account access": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 3,
+      "IRRELEVANT": 0
+    },
+    "refund process": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "product quality": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 4,
+      "IRRELEVANT": 0
+    },
+    "exchange process": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "app experience": {
+      "DIRECT_WISHLIST": 5,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 41,
+      "IRRELEVANT": 0
+    },
+    "payment/checkout": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 32,
+      "IRRELEVANT": 0
+    },
+    "product information": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "product authenticity": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 3,
+      "IRRELEVANT": 0
+    },
+    "order fulfillment": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 10,
+      "IRRELEVANT": 0
+    },
+    "customer safety": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "price/value uncertainty": {
+      "DIRECT_WISHLIST": 4,
+      "ADJACENT_DECISION": 2,
+      "GENERAL_ECOMMERCE": 15,
+      "IRRELEVANT": 0
+    },
+    "authentication/technical issues": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "returns/exchange": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 25,
+      "IRRELEVANT": 0
+    },
+    "trust/authenticity": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "tracking uncertainty": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "service issues": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "timing/not urgent": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "delivery reliability": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "order cancellation": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "order handling": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "product accuracy": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "customer rewards": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "insufficient/poor images": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "review credibility": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "wishlist limit": {
+      "DIRECT_WISHLIST": 1,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "wishlist functionality": {
+      "DIRECT_WISHLIST": 1,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "quality": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "variety uncertainty": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "appearance/look uncertainty": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 3,
+      "GENERAL_ECOMMERCE": 4,
+      "IRRELEVANT": 0
+    },
+    "style/look uncertainty": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    }
+  },
+  "barrierSeverityDistribution": {
+    "HIGH": 1090,
+    "MEDIUM": 62,
+    "LOW": 1
+  },
+  "uncertaintyCategoryFrequency": {
+    "authenticity": 1,
+    "returns policy": 1,
+    "refund process": 2,
+    "return policy": 1,
+    "authenticity/trust": 1,
+    "delivery": 1,
+    "customer communication": 1,
+    "order status": 1,
+    "reward system": 1,
+    "price": 2,
+    "quality": 4,
+    "fit": 2,
+    "brand suitability": 1,
+    "suitability": 1,
+    "product quality": 1,
+    "color": 1,
+    "style": 1
+  },
+  "uncertaintyCategoryByRelevanceClass": {
+    "authenticity": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "returns policy": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "refund process": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "return policy": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "authenticity/trust": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "delivery": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "customer communication": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "order status": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "reward system": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "price": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 2,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "quality": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 3,
+      "IRRELEVANT": 0
+    },
+    "fit": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "brand suitability": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "suitability": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "product quality": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "color": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "style": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    }
+  },
+  "postponementPresentDistribution": {
+    "UNKNOWN": 1545,
+    "YES": 261,
+    "NO": 238
+  },
+  "postponementReasonFrequency": {
+    "User is hesitant to purchase due to past negative experiences.": 1,
+    "Waiting for resolution of refund issue.": 1,
+    "Waiting for clarity on order fulfillment.": 1,
+    "User is evaluating fit before making a purchase.": 1,
+    "User indicates they may not order again due to poor experience.": 1,
+    "User is waiting for resolution of their refund/exchange.": 1,
+    "User is frustrated and may cancel the order.": 1,
+    "User has decided not to order any other item.": 1,
+    "User is hesitant to order again.": 2,
+    "User is frustrated with service.": 5,
+    "User is hesitant to purchase due to authenticity concerns.": 3,
+    "User is deterred by the hassle of returns.": 1,
+    "User is likely hesitant to make future purchases due to poor experience.": 1,
+    "User is likely hesitant to make future purchases due to perceived quality issues.": 1,
+    "User is likely hesitant to make future purchases due to poor service.": 1,
+    "User is likely hesitant to make future purchases due to delivery issues.": 1,
+    "User is avoiding future purchases.": 1,
+    "User is frustrated with order cancellations.": 1,
+    "User is delaying purchases due to distrust.": 1,
+    "User is hesitant to use the app again.": 2,
+    "Unresolved refund issue.": 1,
+    "User is frustrated with the service.": 2,
+    "User is dissatisfied with the product received.": 1,
+    "Frustration with returns.": 1,
+    "Frustration with customer service.": 3,
+    "Frustration with order fulfillment.": 2,
+    "Frustration with delivery issues.": 2,
+    "Loss of trust in Myntra's delivery system.": 1,
+    "Waiting for refund and resolution of payment issues.": 1,
+    "Waiting for resolution of the issue with the product.": 1,
+    "Waiting for resolution of the return issue.": 3,
+    "Waiting for resolution of the OTP issue.": 1,
+    "Waiting for resolution of delivery issues.": 1,
+    "Frustration with service.": 5,
+    "Unable to return the product.": 1,
+    "Frustration with the return process.": 4,
+    "Frustration with product authenticity.": 1,
+    "Frustration with order cancellations.": 2,
+    "Frustration with receiving incorrect products.": 1,
+    "Frustration with product quality.": 1,
+    "User feels overwhelmed and frustrated with the app experience.": 1,
+    "User feels unable to trust the platform for future purchases.": 3,
+    "User is hesitant to trust the platform for future purchases.": 1,
+    "Loss of trust in Myntra's service.": 1,
+    "User is waiting for better logistics service.": 1,
+    "User is waiting for a resolution on the return.": 1,
+    "User is waiting for account access resolution.": 1,
+    "User is waiting for a resolution on the exchange.": 2,
+    "User is waiting for a resolution on the order.": 1,
+    "User is waiting for a resolution on the refund.": 1,
+    "User is considering legal action.": 3,
+    "User is considering canceling the order.": 3,
+    "User is waiting for a refund.": 2,
+    "User is waiting for a resolution.": 5,
+    "User is considering abandoning the return process.": 2,
+    "Waiting for timely delivery.": 3,
+    "Waiting for resolution of exchange issue.": 2,
+    "Waiting for resolution of return issue.": 1,
+    "Waiting for resolution of payment issue.": 1,
+    "Waiting for resolution of complaint.": 1,
+    "Frustration with delivery.": 8,
+    "Distrust in product quality.": 2,
+    "Frustration with unresolved return issues.": 1,
+    "Frustration with fees.": 1,
+    "Frustration with unresolved issues.": 1,
+    "User is considering further investigation.": 1,
+    "Negative experiences with Myntra's service.": 1,
+    "Doubt about product quality.": 1,
+    "Doubt about order fulfillment.": 1,
+    "Frustration with app usability.": 1,
+    "Negative experience with customer service.": 1,
+    "Confusion over exchange policy.": 1,
+    "Doubt about order reliability.": 1,
+    "Doubt about payment reliability.": 1,
+    "User is unable to complete the purchase.": 1,
+    "User feels unsafe and lacks support.": 1,
+    "User is dissatisfied with product quality and service.": 2,
+    "User is confused about delivery fees.": 1,
+    "User is waiting for the refund.": 1,
+    "User is waiting for the delivery.": 1,
+    "Unresolved issues with wrong item and customer service.": 1,
+    "Unresolved issues with order and exchange.": 1,
+    "Ongoing issues with product exchanges.": 1,
+    "Unresolved exchange request.": 2,
+    "Issues with app functionality.": 1,
+    "Concerns about security may delay purchases.": 1,
+    "Unresolved delivery issues.": 1,
+    "Concerns about product authenticity and service.": 1,
+    "Frustration with the refund process.": 2,
+    "Frustration with delivery scheduling.": 1,
+    "Frustration with order accuracy.": 1,
+    "Frustration with delivery personnel.": 1,
+    "Limitations on payment options.": 1,
+    "User is considering not using Myntra again.": 3,
+    "User is frustrated and considering not buying again.": 1,
+    "User is frustrated with the process.": 1,
+    "User is considering switching to another platform.": 1,
+    "User is frustrated and considering switching to another platform.": 1,
+    "Waiting for clarification on pricing.": 1,
+    "Distrust in the platform.": 1,
+    "Waiting for refund.": 4,
+    "Concern over product quality.": 4,
+    "Frustration with delivery and customer service.": 2,
+    "Disappointment with product quality and return process.": 1,
+    "Doubt about product authenticity.": 1,
+    "User is hesitant to purchase again due to unresolved issues.": 1,
+    "User is hesitant to purchase again due to past experience.": 4,
+    "Waiting for resolution of order delay.": 1,
+    "Loss of trust in the platform.": 1,
+    "Waiting for refund to be processed.": 1,
+    "Loss of trust in the app.": 1,
+    "Loss of trust in delivery service.": 1,
+    "Waiting for exchange resolution.": 1,
+    "Waiting for product delivery.": 1,
+    "Waiting for resolution of order issue.": 1,
+    "Waiting for refund resolution.": 1,
+    "Waiting for customer service resolution.": 1,
+    "Waiting for delivery resolution.": 1,
+    "Waiting for improvement in delivery service.": 1,
+    "User is frustrated with service quality.": 2,
+    "User is unlikely to purchase again due to negative experience.": 2,
+    "User is unlikely to purchase due to dissatisfaction with fees.": 1,
+    "User is unlikely to purchase again due to negative experience with returns.": 1,
+    "User is uncertain about the platform's reliability.": 1,
+    "User is waiting for correct items to arrive.": 1,
+    "User may delay future purchases due to negative experience.": 2,
+    "User is hesitant to purchase due to exchange issues.": 1,
+    "User is hesitant to make future purchases due to refund issues.": 1,
+    "Frustration with cashback.": 1,
+    "Frustration with order handling.": 1,
+    "User is hesitant to purchase due to delivery issues.": 2,
+    "User is hesitant to purchase due to app issues.": 1,
+    "User is likely postponing purchase due to poor delivery experience.": 1,
+    "User is likely postponing purchase due to unresolved delivery issues.": 1,
+    "User is likely postponing purchase due to negative service experience.": 1,
+    "Waiting for correct product delivery.": 1,
+    "Waiting for a trustworthy experience.": 1,
+    "User is discouraged from using the app.": 1,
+    "User is discouraged from future purchases.": 3,
+    "User is hesitant to purchase again due to past experiences.": 1,
+    "User is hesitant to purchase again due to poor customer service.": 1,
+    "User is hesitant to purchase due to previous negative experiences.": 1,
+    "User is hesitant to purchase due to poor service.": 1,
+    "User is discouraged from engaging with the platform.": 1,
+    "Disappointment with delivery and cancellation process.": 1,
+    "Frustration with delivery attempts and customer service.": 1,
+    "Dissatisfaction with delivery.": 1,
+    "Poor customer service.": 1,
+    "Cancelled order due to delivery issues.": 4,
+    "Uncertainty about delivery reliability.": 1,
+    "User decided to uninstall the app.": 1,
+    "User is unhappy with service.": 2,
+    "Frustration with delivery and stock issues.": 1,
+    "User is considering filing a complaint.": 1,
+    "Negative experience with product quality.": 2,
+    "Negative experience with customer support.": 1,
+    "User is frustrated with the return process.": 1,
+    "User is frustrated with order delays.": 1,
+    "Unable to access the app.": 1,
+    "User is hesitant to purchase.": 1,
+    "Unable to use account for exchange or return.": 1,
+    "User is hesitant to purchase due to order cancellation issues.": 1,
+    "User indicates they won't order again due to frustration.": 1,
+    "User indicates they are hesitant to order again.": 1,
+    "User's frustration with app performance may delay purchases.": 1,
+    "User's distrust may delay purchasing.": 1,
+    "User is waiting for clarity on sale pricing.": 1,
+    "User is waiting for clarity on pricing.": 1,
+    "User is frustrated with undeliverable items.": 1,
+    "User is unable to save items for future consideration.": 1,
+    "User is considering leaving the platform due to dissatisfaction.": 1,
+    "User is frustrated with stock availability.": 1,
+    "Items are unavailable for delivery.": 2,
+    "User is discouraged from purchasing due to price changes.": 1,
+    "User is discouraged from purchasing due to price discrepancies.": 1,
+    "User is hesitant to purchase due to quality concerns.": 2,
+    "Concern over product authenticity.": 1,
+    "User is looking for better options.": 1,
+    "User is waiting for suitable options.": 1,
+    "User is waiting for better options.": 1,
+    "User is waiting to find suitable options.": 1,
+    "User is not purchasing due to lack of immediate need.": 1,
+    "User is uncertain about wearing the dress due to color.": 1,
+    "Concern over material quality.": 1,
+    "User is waiting for suggestions.": 1,
+    "User is waiting to confirm fit and quality.": 1
+  },
+  "postponementReasonByRelevanceClass": {
+    "User is hesitant to purchase due to past negative experiences.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for resolution of refund issue.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for clarity on order fulfillment.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is evaluating fit before making a purchase.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "User indicates they may not order again due to poor experience.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is waiting for resolution of their refund/exchange.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is frustrated and may cancel the order.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User has decided not to order any other item.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to order again.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "User is frustrated with service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 5,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to purchase due to authenticity concerns.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 3,
+      "IRRELEVANT": 0
+    },
+    "User is deterred by the hassle of returns.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is likely hesitant to make future purchases due to poor experience.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is likely hesitant to make future purchases due to perceived quality issues.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is likely hesitant to make future purchases due to poor service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is likely hesitant to make future purchases due to delivery issues.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is avoiding future purchases.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is frustrated with order cancellations.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is delaying purchases due to distrust.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to use the app again.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "Unresolved refund issue.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is frustrated with the service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "User is dissatisfied with the product received.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Frustration with returns.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Frustration with customer service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 3,
+      "IRRELEVANT": 0
+    },
+    "Frustration with order fulfillment.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "Frustration with delivery issues.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "Loss of trust in Myntra's delivery system.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for refund and resolution of payment issues.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for resolution of the issue with the product.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for resolution of the return issue.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 3,
+      "IRRELEVANT": 0
+    },
+    "Waiting for resolution of the OTP issue.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for resolution of delivery issues.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Frustration with service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 5,
+      "IRRELEVANT": 0
+    },
+    "Unable to return the product.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Frustration with the return process.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 4,
+      "IRRELEVANT": 0
+    },
+    "Frustration with product authenticity.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Frustration with order cancellations.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "Frustration with receiving incorrect products.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Frustration with product quality.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User feels overwhelmed and frustrated with the app experience.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User feels unable to trust the platform for future purchases.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 3,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to trust the platform for future purchases.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Loss of trust in Myntra's service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is waiting for better logistics service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is waiting for a resolution on the return.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is waiting for account access resolution.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is waiting for a resolution on the exchange.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "User is waiting for a resolution on the order.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is waiting for a resolution on the refund.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is considering legal action.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 3,
+      "IRRELEVANT": 0
+    },
+    "User is considering canceling the order.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 3,
+      "IRRELEVANT": 0
+    },
+    "User is waiting for a refund.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "User is waiting for a resolution.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 5,
+      "IRRELEVANT": 0
+    },
+    "User is considering abandoning the return process.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "Waiting for timely delivery.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 3,
+      "IRRELEVANT": 0
+    },
+    "Waiting for resolution of exchange issue.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "Waiting for resolution of return issue.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for resolution of payment issue.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for resolution of complaint.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Frustration with delivery.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 8,
+      "IRRELEVANT": 0
+    },
+    "Distrust in product quality.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "Frustration with unresolved return issues.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Frustration with fees.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Frustration with unresolved issues.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is considering further investigation.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Negative experiences with Myntra's service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Doubt about product quality.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Doubt about order fulfillment.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Frustration with app usability.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Negative experience with customer service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Confusion over exchange policy.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Doubt about order reliability.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Doubt about payment reliability.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is unable to complete the purchase.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User feels unsafe and lacks support.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is dissatisfied with product quality and service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "User is confused about delivery fees.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is waiting for the refund.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is waiting for the delivery.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Unresolved issues with wrong item and customer service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Unresolved issues with order and exchange.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Ongoing issues with product exchanges.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Unresolved exchange request.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "Issues with app functionality.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Concerns about security may delay purchases.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Unresolved delivery issues.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Concerns about product authenticity and service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Frustration with the refund process.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "Frustration with delivery scheduling.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Frustration with order accuracy.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Frustration with delivery personnel.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Limitations on payment options.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is considering not using Myntra again.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 3,
+      "IRRELEVANT": 0
+    },
+    "User is frustrated and considering not buying again.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is frustrated with the process.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is considering switching to another platform.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is frustrated and considering switching to another platform.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for clarification on pricing.": {
+      "DIRECT_WISHLIST": 1,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "Distrust in the platform.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for refund.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 4,
+      "IRRELEVANT": 0
+    },
+    "Concern over product quality.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 4,
+      "IRRELEVANT": 0
+    },
+    "Frustration with delivery and customer service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "Disappointment with product quality and return process.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Doubt about product authenticity.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to purchase again due to unresolved issues.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to purchase again due to past experience.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 4,
+      "IRRELEVANT": 0
+    },
+    "Waiting for resolution of order delay.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Loss of trust in the platform.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for refund to be processed.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Loss of trust in the app.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Loss of trust in delivery service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for exchange resolution.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for product delivery.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for resolution of order issue.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for refund resolution.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for customer service resolution.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for delivery resolution.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for improvement in delivery service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is frustrated with service quality.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "User is unlikely to purchase again due to negative experience.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "User is unlikely to purchase due to dissatisfaction with fees.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is unlikely to purchase again due to negative experience with returns.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is uncertain about the platform's reliability.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is waiting for correct items to arrive.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "User may delay future purchases due to negative experience.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to purchase due to exchange issues.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to make future purchases due to refund issues.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Frustration with cashback.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Frustration with order handling.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to purchase due to delivery issues.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to purchase due to app issues.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is likely postponing purchase due to poor delivery experience.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is likely postponing purchase due to unresolved delivery issues.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is likely postponing purchase due to negative service experience.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for correct product delivery.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Waiting for a trustworthy experience.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is discouraged from using the app.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is discouraged from future purchases.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 3,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to purchase again due to past experiences.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to purchase again due to poor customer service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to purchase due to previous negative experiences.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to purchase due to poor service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is discouraged from engaging with the platform.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Disappointment with delivery and cancellation process.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Frustration with delivery attempts and customer service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Dissatisfaction with delivery.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Poor customer service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Cancelled order due to delivery issues.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 4,
+      "IRRELEVANT": 0
+    },
+    "Uncertainty about delivery reliability.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User decided to uninstall the app.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is unhappy with service.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "Frustration with delivery and stock issues.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is considering filing a complaint.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Negative experience with product quality.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "Negative experience with customer support.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is frustrated with the return process.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is frustrated with order delays.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Unable to access the app.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to purchase.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Unable to use account for exchange or return.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to purchase due to order cancellation issues.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User indicates they won't order again due to frustration.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User indicates they are hesitant to order again.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User's frustration with app performance may delay purchases.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User's distrust may delay purchasing.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is waiting for clarity on sale pricing.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "User is waiting for clarity on pricing.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "User is frustrated with undeliverable items.": {
+      "DIRECT_WISHLIST": 1,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "User is unable to save items for future consideration.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is considering leaving the platform due to dissatisfaction.": {
+      "DIRECT_WISHLIST": 1,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "User is frustrated with stock availability.": {
+      "DIRECT_WISHLIST": 1,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "Items are unavailable for delivery.": {
+      "DIRECT_WISHLIST": 2,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "User is discouraged from purchasing due to price changes.": {
+      "DIRECT_WISHLIST": 1,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "User is discouraged from purchasing due to price discrepancies.": {
+      "DIRECT_WISHLIST": 1,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to purchase due to quality concerns.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "Concern over product authenticity.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is looking for better options.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is waiting for suitable options.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "User is waiting for better options.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "User is waiting to find suitable options.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "User is not purchasing due to lack of immediate need.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is uncertain about wearing the dress due to color.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Concern over material quality.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is waiting for suggestions.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is waiting to confirm fit and quality.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    }
+  },
+  "decisionCriteriaFrequency": {
+    "material": 2,
+    "comfort": 3,
+    "quality": 95,
+    "fit": 20,
+    "price/value": 18,
+    "size": 6,
+    "suitability": 1,
+    "performance": 1,
+    "occasion": 2,
+    "trust": 4,
+    "color": 1,
+    "variety": 6,
+    "effectiveness": 1,
+    "user experience": 8,
+    "style/look": 8,
+    "product variety": 5,
+    "customer support": 2,
+    "authenticity": 3,
+    "customer service": 2,
+    "value": 2,
+    "durability": 1,
+    "delivery timing": 2,
+    "functionality": 1,
+    "returns": 3,
+    "price": 1,
+    "service": 2,
+    "service quality": 2,
+    "delivery": 5,
+    "app experience": 1,
+    "offers/discounts": 1,
+    "overall experience": 1,
+    "return policy": 1,
+    "brand": 1,
+    "appearance/look": 1
+  },
+  "decisionCriteriaByRelevanceClass": {
+    "material": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "comfort": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "quality": {
+      "DIRECT_WISHLIST": 1,
+      "ADJACENT_DECISION": 4,
+      "GENERAL_ECOMMERCE": 90,
+      "IRRELEVANT": 0
+    },
+    "fit": {
+      "DIRECT_WISHLIST": 1,
+      "ADJACENT_DECISION": 8,
+      "GENERAL_ECOMMERCE": 11,
+      "IRRELEVANT": 0
+    },
+    "price/value": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 5,
+      "GENERAL_ECOMMERCE": 13,
+      "IRRELEVANT": 0
+    },
+    "size": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 5,
+      "IRRELEVANT": 0
+    },
+    "suitability": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "performance": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "occasion": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 2,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "trust": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 4,
+      "IRRELEVANT": 0
+    },
+    "color": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "variety": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 6,
+      "IRRELEVANT": 0
+    },
+    "effectiveness": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "user experience": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 8,
+      "IRRELEVANT": 0
+    },
+    "style/look": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 2,
+      "GENERAL_ECOMMERCE": 6,
+      "IRRELEVANT": 0
+    },
+    "product variety": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 5,
+      "IRRELEVANT": 0
+    },
+    "customer support": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "authenticity": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 3,
+      "IRRELEVANT": 0
+    },
+    "customer service": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "value": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "durability": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "delivery timing": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "functionality": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "returns": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 3,
+      "IRRELEVANT": 0
+    },
+    "price": {
+      "DIRECT_WISHLIST": 1,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "service": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "service quality": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "delivery": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 5,
+      "IRRELEVANT": 0
+    },
+    "app experience": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "offers/discounts": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "overall experience": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "return policy": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "brand": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 0,
+      "IRRELEVANT": 0
+    },
+    "appearance/look": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    }
+  },
+  "comparisonPresentDistribution": {
+    "UNKNOWN": 1796,
+    "NO": 234,
+    "YES": 14
+  },
+  "externalInfoSourceFrequency": {
+    "social media": 1,
+    "other": 1,
+    "Google": 6,
+    "friends/family": 1,
+    "Reddit": 8,
+    "other marketplace": 1,
+    "reddit": 1
+  },
+  "externalInfoSourceByRelevanceClass": {
+    "social media": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "other": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Google": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 6,
+      "IRRELEVANT": 0
+    },
+    "friends/family": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "Reddit": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 3,
+      "GENERAL_ECOMMERCE": 5,
+      "IRRELEVANT": 0
+    },
+    "other marketplace": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "reddit": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    }
+  },
+  "socialValidationPresentDistribution": {
+    "UNKNOWN": 958,
+    "NO": 1079,
+    "YES": 7
+  },
+  "workaroundFrequency": {
+    "record unboxing video": 1,
+    "keeping measurements in notes app": 1,
+    "checking fabric composition": 1
+  },
+  "workaroundByRelevanceClass": {
+    "record unboxing video": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "keeping measurements in notes app": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "checking fabric composition": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    }
+  },
+  "segmentSignalFrequency": {
+    "frequent shopper": 72,
+    "repeat purchaser": 1,
+    "high uncertainty shopper": 5,
+    "occasional shopper": 5,
+    "frustrated customer": 30,
+    "long-time user": 4,
+    "dissatisfied customer": 17,
+    "long-term user": 3,
+    "former loyal customer": 1,
+    "former satisfied customer": 1,
+    "loyal customer": 2,
+    "satisfied customer": 2,
+    "frustrated shopper": 13,
+    "frequent returner": 1,
+    "disappointed customer": 5,
+    "dissatisfied shopper": 2,
+    "satisfied shopper": 2,
+    "discontent shopper": 1,
+    "former user": 1,
+    "elite customer": 1,
+    "long-term customer": 3,
+    "concerned user": 1,
+    "comparison-heavy shopper": 3,
+    "disenchanted shopper": 4,
+    "occasion-driven shopper": 2
+  },
+  "segmentSignalByRelevanceClass": {
+    "frequent shopper": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 72,
+      "IRRELEVANT": 0
+    },
+    "repeat purchaser": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "high uncertainty shopper": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 2,
+      "GENERAL_ECOMMERCE": 3,
+      "IRRELEVANT": 0
+    },
+    "occasional shopper": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 5,
+      "IRRELEVANT": 0
+    },
+    "frustrated customer": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 30,
+      "IRRELEVANT": 0
+    },
+    "long-time user": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 4,
+      "IRRELEVANT": 0
+    },
+    "dissatisfied customer": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 17,
+      "IRRELEVANT": 0
+    },
+    "long-term user": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 3,
+      "IRRELEVANT": 0
+    },
+    "former loyal customer": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "former satisfied customer": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "loyal customer": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "satisfied customer": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "frustrated shopper": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 13,
+      "IRRELEVANT": 0
+    },
+    "frequent returner": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "disappointed customer": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 5,
+      "IRRELEVANT": 0
+    },
+    "dissatisfied shopper": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "satisfied shopper": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    },
+    "discontent shopper": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "former user": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "elite customer": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "long-term customer": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 3,
+      "IRRELEVANT": 0
+    },
+    "concerned user": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "comparison-heavy shopper": {
+      "DIRECT_WISHLIST": 1,
+      "ADJACENT_DECISION": 1,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "disenchanted shopper": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 4,
+      "IRRELEVANT": 0
+    },
+    "occasion-driven shopper": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 2,
+      "IRRELEVANT": 0
+    }
+  },
+  "sentimentDistribution": {
+    "POSITIVE": 843,
+    "NEGATIVE": 1012,
+    "NEUTRAL": 186,
+    "MIXED": 3
   },
   "emotionFrequency": {
-    "happy": 575,
-    "excited": 41,
-    "frustrated": 475,
-    "neutral": 116,
-    "disappointed": 72,
-    "confused": 11,
-    "angry": 1,
-    "anxious": 5,
-    "satisfied": 1,
-    "confident": 1
+    "frustration": 942,
+    "disappointment": 291,
+    "satisfaction": 237,
+    "distrust": 118,
+    "trust": 31,
+    "dissatisfaction": 9,
+    "confusion": 21,
+    "anxiety": 7,
+    "anger": 22,
+    "excitement": 22,
+    "surprise": 2,
+    "irritation": 2,
+    "fear": 1,
+    "stress": 1,
+    "helplessness": 1,
+    "shock": 1,
+    "urgency": 1,
+    "discomfort": 1,
+    "happiness": 3,
+    "concern": 1,
+    "demotivation": 1,
+    "joy": 1,
+    "betrayal": 1,
+    "uncertainty": 1
   },
-  "wishlistMotivationDistribution": {
-    "unsure about fit": 6,
-    "just browsing": 2,
-    "comparison shopping": 7,
-    "gift idea": 1,
-    "saving gift idea": 3
+  "decisionOutcomeDistribution": {
+    "UNKNOWN": 1878,
+    "ABANDONED": 95,
+    "POSTPONED": 27,
+    "PURCHASED": 43,
+    "STILL_CONSIDERING": 1
   },
-  "purchaseBarrierDistribution": {
-    "trust/authenticity concern": 285,
-    "return/exchange friction": 110,
-    "fit uncertainty": 26,
-    "waiting for discount": 2,
-    "waiting for delivery": 7,
-    "delivery issues": 2,
-    "return policy complications": 1,
-    "needs external validation": 8,
-    "size unavailable": 5,
-    "wrong occasion timing": 1,
-    "price too high": 9,
-    "return not accepted": 1,
-    "refund not received": 2,
-    "poor customer support": 2,
-    "cancellation not allowed": 1,
-    "unresolved issues": 1,
-    "poor customer service": 4,
-    "no tag for return": 1,
-    "order cancellation": 1,
-    "poor product quality history": 7,
-    "delivery not available": 1,
-    "return issues": 2,
-    "payment method limitation": 1,
-    "quality": 1,
-    "delivery stopped": 1,
-    "return process friction": 1,
-    "order status uncertainty": 1,
-    "access to account": 1,
-    "inconvenient refund process": 1,
-    "payment issues": 1,
-    "wrong product received": 1,
-    "pickup issues": 1,
-    "platform fee": 1,
-    "delivery delays": 1,
-    "needs support": 1,
-    "long delivery time": 1,
-    "limited options": 1
-  },
-  "uncertaintyTypeDistribution": {
-    "fit/size": 29,
-    "color accuracy": 2,
-    "quality": 9,
-    "authenticity": 3,
-    "order status": 1,
-    "refund status": 1
-  },
-  "comparisonBehaviorDistribution": {
-    "compares within own wishlist": 2,
-    "compares across apps/platforms": 9,
-    "asks friends/family": 1
-  },
-  "externalInfoSoughtDistribution": {},
-  "decisionFactorDistribution": {
-    "fit": 48,
-    "brand_trust": 10,
-    "size": 10,
-    "price": 46,
-    "styling": 6,
-    "return_policy": 2,
-    "reviews": 3
-  },
-  "wishlistIntentDistribution": {
-    "bookmark_only": 169,
-    "genuine_intent": 575,
-    "unclear": 551,
-    "price_tracking": 3
-  },
-  "segmentHintDistribution": {
-    "frequent-buyer": 44,
-    "occasion-shopper": 18,
-    "trend-follower": 9,
-    "frustrated-shopper": 2,
-    "budget-conscious": 22,
-    "disappointed_longtime_customer": 1,
-    "trust-seeker": 1,
-    "loyal_customer": 10,
-    "disappointed-customer": 2,
-    "health-conscious": 1,
-    "loyal-customer": 2,
-    "frustrated-customer": 1,
-    "frustrated_user": 1,
-    "frequent_buyer": 3,
-    "disappointed_customer": 14,
-    "frustrated_gifter": 1,
-    "frustrated_customer": 42,
-    "disillusioned_customer": 2,
-    "quality-conscious_customer": 1,
-    "occasional-shopper": 1,
-    "first-time-buyer": 8,
-    "detail-oriented": 1,
-    "angry_customer": 1,
-    "confused_customer": 1,
-    "quality-conscious": 3,
-    "concerned_customer": 3,
-    "size-conscious": 1,
-    "frustrated_buyer": 14,
-    "disappointed_buyer": 2,
-    "concerned_consumer": 1,
-    "trusting-shopper": 1,
-    "disillusioned-customer": 1,
-    "brand-loyal": 3,
-    "trust-sensitive": 1,
-    "quality-focused": 1,
-    "frustrated_shopper": 1,
-    "scam-victim": 1,
-    "frustrated_returner": 1,
-    "casual_shopper": 1,
-    "style-conscious": 1,
-    "value-seeker": 1,
-    "fit-seeker": 1,
-    "fashion-enthusiast": 1
+  "metricRelevanceDistribution": {
+    "LOW": 487,
+    "HIGH": 836,
+    "MEDIUM": 269,
+    "NONE": 452
   }
 }

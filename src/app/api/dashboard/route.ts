@@ -1,19 +1,17 @@
-import { getAggregation, getInsights, getOpportunities, getRecommendations } from '@/lib/store';
+import { getAggregation, getResearchReport, getRecommendations } from '@/lib/store';
 import { ok, fail } from '@/lib/api-response';
 
 export async function GET() {
   try {
-    const [stats, insights, opportunities, recommendations] = await Promise.all([
+    const [stats, report, recommendations] = await Promise.all([
       getAggregation(),
-      getInsights(),
-      getOpportunities(),
+      getResearchReport(),
       getRecommendations(),
     ]);
 
     return ok({
       stats,
-      insightsCount: insights.length,
-      opportunitiesCount: opportunities.length,
+      reportGeneratedAt: report?.generatedAt ?? null,
       recommendationsCount: recommendations.length,
     });
   } catch (err) {
