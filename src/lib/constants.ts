@@ -22,14 +22,36 @@ export const ANALYSIS_BATCH_SIZE = 10;
 export const RESEARCH_REPORT_SAMPLE_SIZE = 25;
 
 /**
- * How many analyzed reviews to sample into the insights prompt. Each record
- * here is just {id, review, sentiment} — far lighter than the research
- * report's per-record shape — and insights no longer sends the stats blob
- * at all (it's a "read and synthesize" task, not a quantification one), so
- * this can go higher than the research-report sample while staying safely
- * under the same 30,000 TPM ceiling.
+ * How many analyzed reviews to sample into each insights batch. Review
+ * length in this corpus is heavily skewed (p50 ~135 chars, p90 ~936, max
+ * ~2800) — confirmed via a real 429 that two same-sized batches can differ
+ * 4x in actual token size depending on which reviews they draw. Combined
+ * with the per-review length cap in the insights route, 120 keeps even the
+ * worst case (every review in the batch hitting the cap) safely under this
+ * org's 30,000 TPM ceiling on gpt-4o, with real margin — not just on average.
  */
-export const INSIGHTS_SAMPLE_SIZE = 180;
+export const INSIGHTS_SAMPLE_SIZE = 120;
+
+/**
+ * How many independent, non-overlapping batches of INSIGHTS_SAMPLE_SIZE
+ * reviews to run — each batch drafts its own answer per question (a single
+ * call safely fits this org's 30k TPM ceiling), then a final synthesis call
+ * merges the drafts into one answer per question. Net effect: insights draw
+ * on INSIGHTS_SAMPLE_SIZE * INSIGHTS_BATCH_COUNT reviews total without any
+ * single request exceeding the rate limit.
+ */
+export const INSIGHTS_BATCH_COUNT = 3;
+
+/**
+ * Minimum gap enforced between the *start* of consecutive insight-batch
+ * calls. Confirmed via a real 429: this org's gpt-4o TPM limit is a rolling
+ * ~60s window counting actual completed usage, not a continuously-refilling
+ * bucket — a 30s post-call sleep still 429'd on batch 2 (reported "Requested
+ * 50217" — batch 1's ~20k tokens were still fully counted 30s later). 65s
+ * gives the window room to roll over with margin; still not a guarantee if
+ * OpenAI's window boundary lands unluckily.
+ */
+export const INSIGHTS_BATCH_MIN_GAP_MS = 65000;
 
 /** The 10 discovery questions the Growth Team needs answered, in quick Q&A form. */
 export const DISCOVERY_QUESTIONS = [

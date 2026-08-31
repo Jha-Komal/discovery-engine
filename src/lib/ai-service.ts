@@ -1,6 +1,7 @@
 import { completeJson, completeText } from './openai-provider';
 import { buildReviewAnalysisPrompt } from './prompts/review-analysis.prompt';
 import { buildInsightGenerationPrompt } from './prompts/insight-generation.prompt';
+import { buildInsightSynthesisPrompt } from './prompts/insight-synthesis.prompt';
 import { buildResearchReportPrompt } from './prompts/research-report.prompt';
 import { buildRecommendationPrompt } from './prompts/recommendation.prompt';
 import { AnalysisResultArraySchema, InsightArraySchema, RecommendationArraySchema } from './validators';
@@ -137,6 +138,30 @@ export async function generateInsights(
 ): Promise<Omit<Insight, 'id'>[]> {
   const prompt = buildInsightGenerationPrompt(representativeReviews, questions);
   const parsed = await completeAndParseArray(prompt, 'generateInsights', SYNTHESIS_MODEL, 3000);
+  return InsightArraySchema.parse(parsed);
+}
+
+/**
+ * Merges multiple independent draft-answer sets (one per review batch) for
+ * the same questions into a single final answer per question — the "reduce"
+ * step after running generateInsights over several non-overlapping batches,
+ * so the final result reflects far more reviews than a single call's token
+ * budget could hold at once.
+ */
+export async function synthesizeInsights(
+  draftBatches: Array<Omit<Insight, 'id'>[]>,
+  questions: readonly string[]
+): Promise<Omit<Insight, 'id'>[]> {
+  const drafts = questions.map((question) => ({
+    question,
+    answers: draftBatches
+      .map((batch) => batch.find((i) => i.question === question))
+      .filter((i): i is Omit<Insight, 'id'> => !!i)
+      .map((i) => ({ answer: i.answer, confidence: i.confidence })),
+  }));
+
+  const prompt = buildInsightSynthesisPrompt(drafts);
+  const parsed = await completeAndParseArray(prompt, 'synthesizeInsights', SYNTHESIS_MODEL, 3000);
   return InsightArraySchema.parse(parsed);
 }
 

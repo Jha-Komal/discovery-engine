@@ -1,62 +1,62 @@
 [
   {
-    "id": "f5ce177c-5fd2-43c9-9424-8b23c91ade85",
+    "id": "5d20241b-0ffc-4ea9-bb19-06958caab58b",
     "question": "Why do users add fashion products to their wishlist?",
-    "answer": "Users add fashion products to their wishlist primarily to keep track of items they are interested in purchasing later. This allows them to compare options, monitor price changes, and revisit products they like without making an immediate purchase. The wishlist serves as a convenient tool for organizing potential purchases and making informed decisions.",
+    "answer": "Users add fashion products to their wishlist primarily to keep track of items they are interested in but are not ready to purchase immediately. This can be due to wanting to compare with other products, waiting for more information or reviews, or simply to bookmark items they like for future consideration.",
     "confidence": 0.9
   },
   {
-    "id": "fb4df3f4-88cb-467b-af82-a066438946da",
+    "id": "af11f74b-6901-48a2-9e1c-92378176762c",
     "question": "What prevents wishlisted products from eventually being purchased?",
-    "answer": "Several factors prevent wishlisted products from being purchased, including price fluctuations, availability issues, and delivery constraints. Users often experience frustration when prices increase unexpectedly or when items become unavailable for delivery to their location. Additionally, technical issues with the app and dissatisfaction with customer service can deter purchases.",
+    "answer": "Several factors prevent wishlisted products from being purchased, including concerns about product quality, fit, and size, as well as delivery issues and poor customer service experiences. Users may also find better alternatives elsewhere or lose interest over time. Additionally, logistical issues like delayed deliveries or incorrect items can deter purchases.",
     "confidence": 0.9
   },
   {
-    "id": "55e30fbb-fbf9-455f-ac15-7d0c3b402837",
+    "id": "06748fc4-f3bc-4077-8458-19912a5472a5",
     "question": "What uncertainties remain after users have identified a product they like?",
-    "answer": "After identifying a product they like, users often face uncertainties regarding the accuracy of product images, fit and size, and the reliability of customer reviews. Concerns about the authenticity of products and potential discrepancies between the displayed and actual product quality also contribute to hesitation.",
-    "confidence": 0.8
-  },
-  {
-    "id": "930e776e-0892-4bd7-badd-a874db14e054",
-    "question": "What causes users to postpone a purchase?",
-    "answer": "Users postpone purchases due to a combination of factors such as waiting for better deals, uncertainty about fit and size, and concerns about product availability. Technical issues with the app and negative experiences with customer service also contribute to delays in purchasing decisions.",
-    "confidence": 0.8
-  },
-  {
-    "id": "e929cbcc-f75b-4756-83b8-da3221c0054e",
-    "question": "How do users compare multiple shortlisted products?",
-    "answer": "Users compare multiple shortlisted products by using the wishlist to organize and review their options. They often look for differences in price, quality, and reviews to make informed decisions. The ability to easily access and manage wishlisted items is crucial for effective comparison.",
-    "confidence": 0.8
-  },
-  {
-    "id": "f9a68655-6d32-407e-b246-ec549e1d5f12",
-    "question": "What information do users seek outside Myntra/AJIO before purchasing?",
-    "answer": "Before purchasing, users often seek additional information such as price comparisons, product reviews, and recommendations from other platforms or social media. They may also look for detailed size guides and styling tips to ensure the product meets their expectations.",
-    "confidence": 0.7
-  },
-  {
-    "id": "3f025890-1fc2-4879-a5d6-63639ea32b14",
-    "question": "What role do fit, size, styling, price, reviews, occasion and social validation play?",
-    "answer": "Fit and size are critical factors in purchasing decisions, as users want assurance that the product will suit them well. Styling and occasion influence the suitability of the product for specific events. Price and reviews impact perceived value and quality, while social validation from peers or influencers can reinforce purchase intent.",
+    "answer": "Users often remain uncertain about the fit and size of the product, the accuracy of product images and descriptions, and the reliability of delivery. Concerns about the return process, customer service responsiveness, and the authenticity of the product also contribute to hesitation.",
     "confidence": 0.9
   },
   {
-    "id": "bf76f439-f813-418c-a2ab-eeeb3711598c",
-    "question": "When do users use the wishlist as genuine purchase intent versus simply as a bookmarking mechanism?",
-    "answer": "Users tend to use the wishlist as genuine purchase intent when they are seriously considering buying the product soon, often revisiting the list to check for updates or price changes. It serves as a bookmarking mechanism when users are casually browsing or comparing options without immediate intent to buy.",
+    "id": "b45264b5-5c73-446e-a7c3-2802d3d70f02",
+    "question": "What causes users to postpone a purchase?",
+    "answer": "Users postpone purchases due to uncertainties about the product's fit, size, and quality, as well as concerns about price changes and delivery issues. Negative past experiences with delivery or customer service can lead to hesitation, and users may also delay purchasing to compare options or wait for more reviews.",
     "confidence": 0.8
   },
   {
-    "id": "353c209d-2eef-4935-82a0-49fee3f4e64d",
+    "id": "2be70447-5d7c-4bec-befb-7f6a7581def7",
+    "question": "How do users compare multiple shortlisted products?",
+    "answer": "Users compare multiple shortlisted products by considering factors such as price, fit, size, styling, and reviews. They often seek additional information or reviews to make informed decisions, and may also consider the reputation of the brand and previous experiences with similar products.",
+    "confidence": 0.8
+  },
+  {
+    "id": "a393146d-aba9-4fe3-a0e9-6a6ec84945db",
+    "question": "What information do users seek outside Myntra/AJIO before purchasing?",
+    "answer": "Users often seek additional reviews, product comparisons, and brand reputation information from external sources. They may also look for user-generated content, such as photos and videos, to verify product authenticity and quality, as well as styling tips and social media opinions to validate their choices.",
+    "confidence": 0.8
+  },
+  {
+    "id": "c63d030b-d709-4c13-88b3-d4c1ebedcd21",
+    "question": "What role do fit, size, styling, price, reviews, occasion and social validation play?",
+    "answer": "Fit and size are critical factors as they directly affect the usability of the product. Styling and occasion influence the suitability of the product for specific events or personal style. Price is a significant consideration, especially when comparing similar items. Reviews and social validation provide reassurance about quality and authenticity, influencing purchase decisions.",
+    "confidence": 0.9
+  },
+  {
+    "id": "6295c522-32f8-440f-98a6-1fe34796b208",
+    "question": "When do users use the wishlist as genuine purchase intent versus simply as a bookmarking mechanism?",
+    "answer": "Users use the wishlist as a genuine purchase intent when they are seriously considering buying the product but need more time to decide or wait for better conditions. It serves as a bookmarking mechanism when users are casually browsing or want to keep track of items they find interesting without immediate purchase plans.",
+    "confidence": 0.8
+  },
+  {
+    "id": "2de45240-650f-42fe-bc20-0cd89ae9f248",
     "question": "How do these behaviors differ across user segments?",
-    "answer": "Different user segments exhibit varying behaviors based on their shopping habits and priorities. Frequent shoppers may use the wishlist more strategically for purchase planning, while casual browsers might use it for inspiration or to track trends. Younger users may prioritize social validation, whereas older users might focus more on practicality and fit.",
+    "answer": "Different user segments exhibit varying behaviors based on their shopping habits and priorities. Frequent shoppers may use the wishlist more strategically for purchase planning, while casual browsers might use it more for bookmarking. Younger users might prioritize trends and social validation, whereas older users may focus more on practicality and quality.",
     "confidence": 0.7
   },
   {
-    "id": "76646575-ac5b-49f3-9fd5-6d2a16ed6935",
+    "id": "26d03005-a836-4860-998d-157cb903c039",
     "question": "What unmet needs emerge consistently across user conversations?",
-    "answer": "Consistent unmet needs include the desire for more accurate product representations, better size and fit guidance, and improved customer service. Users also express a need for more reliable pricing and availability information, as well as enhanced app functionality to streamline the shopping experience.",
-    "confidence": 0.8
+    "answer": "Consistent unmet needs include better management of wishlist features, such as removing limits and improving organization. Users also desire more accurate product information, reliable delivery options, and consistent pricing. Enhanced customer support and resolution of technical issues are also frequently mentioned as areas needing improvement.",
+    "confidence": 0.9
   }
 ]
