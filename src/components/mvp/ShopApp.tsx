@@ -71,6 +71,12 @@ export function ShopApp() {
     window.localStorage.setItem(BAG_KEY, JSON.stringify(bag));
   }, [bag]);
 
+  // Derived, not stored: an id removed from the wishlist (unhearted) must stop
+  // counting toward the 4-item compare cap even though its row no longer
+  // renders — otherwise selecting far fewer than 4 visible items can still
+  // silently hit the cap and disable the rest.
+  const activeSelectedForCompare = selectedForCompare.filter((id) => wishlist.includes(id));
+
   function toggleWishlist(id: string) {
     setWishlist((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
   }
@@ -82,6 +88,7 @@ export function ShopApp() {
   function handleMoveToBag(id: string) {
     setBag((prev) => (prev.includes(id) ? prev : [...prev, id]));
     setLastAddedToBag(id);
+    setSelectedForCompare([]);
     setView('bag');
   }
 
@@ -170,7 +177,7 @@ export function ShopApp() {
     return (
       <WishlistScreen
         wishlist={wishlist}
-        selected={selectedForCompare}
+        selected={activeSelectedForCompare}
         onToggleSelected={toggleSelectedForCompare}
         onBack={() => setView('home')}
         onHelpMeChoose={() => setView('context')}
@@ -181,7 +188,7 @@ export function ShopApp() {
   if (view === 'context') {
     return (
       <ContextSheet
-        selected={selectedForCompare}
+        selected={activeSelectedForCompare}
         bagCount={bag.length}
         onOpenBag={() => setView('bag')}
         onBack={() => setView('wishlist')}
@@ -197,7 +204,7 @@ export function ShopApp() {
   if (view === 'chat') {
     return (
       <CompareChat
-        selected={selectedForCompare}
+        selected={activeSelectedForCompare}
         context={purchaseContext}
         priorities={priorities}
         bagCount={bag.length}

@@ -12,7 +12,7 @@ export function PhoneFrame({ children }: { children: ReactNode }) {
       >
         <div
           className="absolute left-1/2 top-2 z-30 -translate-x-1/2 rounded-full bg-black"
-          style={{ width: 120, height: 34 }}
+          style={{ width: 10, height: 10 }}
         />
         <div className="h-full w-full overflow-y-auto" style={{ scrollbarWidth: 'none' }}>
           {children}
