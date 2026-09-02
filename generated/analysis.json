@@ -145121,5 +145121,780 @@
     },
     "evidenceQuote": "Crepe is actually the cheapest material available, it is often used for lining.",
     "researcherNote": "User's concerns about material quality indicate a barrier to purchasing from their wishlist."
+  },
+  {
+    "reviewId": "4550b0360576f984798e5e4937b261f9749c2fbbf3d94e47cb0b26b32f9ade5e",
+    "relevance": {
+      "class": "GENERAL_ECOMMERCE",
+      "reason": "Discusses issues with product delivery and returns, affecting overall trust in the platform.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "journeyStages": [
+      "purchase consideration"
+    ],
+    "wishlistBehavior": {
+      "jobCategory": null,
+      "jobDescription": null,
+      "supportingEvidence": null
+    },
+    "purchaseIntent": {
+      "level": "LOW",
+      "reason": "User expresses dissatisfaction and distrust towards Myntra.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "barriers": [
+      {
+        "category": "authenticity/trust",
+        "description": "User feels Myntra is not trustworthy due to wrong product delivery and poor customer service.",
+        "evidence": "Myntra is not taking return or doing refund.",
+        "severity": "HIGH",
+        "evidenceStrength": "EXPLICIT"
+      }
+    ],
+    "uncertainties": [],
+    "postponement": {
+      "present": "YES",
+      "reason": "User is hesitant to purchase due to previous negative experience.",
+      "triggerOrCondition": "User is waiting for a resolution to their complaint."
+    },
+    "decisionCriteria": [],
+    "comparisonBehavior": {
+      "present": "UNKNOWN",
+      "itemsCompared": null,
+      "comparisonDimensions": [],
+      "difficulty": null,
+      "outcome": null
+    },
+    "externalInformationSeeking": {
+      "present": "NO",
+      "sources": [],
+      "informationSought": [],
+      "platformInformationGap": null,
+      "evidence": null
+    },
+    "socialValidation": {
+      "present": "NO",
+      "source": null,
+      "validationNeeded": null,
+      "evidence": null
+    },
+    "workarounds": [],
+    "segmentSignals": [],
+    "sentiment": {
+      "overall": "NEGATIVE",
+      "emotions": [
+        "frustration",
+        "distrust"
+      ]
+    },
+    "decisionOutcome": {
+      "status": "UNKNOWN",
+      "evidence": null
+    },
+    "metricConnection": {
+      "relevance": "HIGH",
+      "reason": "User's trust issues directly impact their likelihood of purchasing from their wishlist."
+    },
+    "evidenceQuote": "Myntra is not taking return or doing refund.",
+    "researcherNote": "User's negative experience with product delivery and customer service significantly lowers their purchase intent."
+  },
+  {
+    "reviewId": "ce8f1c02-33e0-46ec-b6df-057bbcf42291",
+    "relevance": {
+      "class": "GENERAL_ECOMMERCE",
+      "reason": "User reports issues with receiving the wrong product and lack of refund, impacting trust.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "journeyStages": [
+      "purchase consideration"
+    ],
+    "wishlistBehavior": {
+      "jobCategory": null,
+      "jobDescription": null,
+      "supportingEvidence": null
+    },
+    "purchaseIntent": {
+      "level": "LOW",
+      "reason": "User expresses trust issues with Myntra.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "barriers": [
+      {
+        "category": "authenticity/trust",
+        "description": "User feels scammed due to receiving a different product and not getting a refund.",
+        "evidence": "they have are scamming they sent me different product also didn't refunded my money",
+        "severity": "HIGH",
+        "evidenceStrength": "EXPLICIT"
+      }
+    ],
+    "uncertainties": [],
+    "postponement": {
+      "present": "YES",
+      "reason": "User is hesitant to purchase due to trust issues.",
+      "triggerOrCondition": "User is waiting for resolution of their complaint."
+    },
+    "decisionCriteria": [],
+    "comparisonBehavior": {
+      "present": "UNKNOWN",
+      "itemsCompared": null,
+      "comparisonDimensions": [],
+      "difficulty": null,
+      "outcome": null
+    },
+    "externalInformationSeeking": {
+      "present": "NO",
+      "sources": [],
+      "informationSought": [],
+      "platformInformationGap": null,
+      "evidence": null
+    },
+    "socialValidation": {
+      "present": "NO",
+      "source": null,
+      "validationNeeded": null,
+      "evidence": null
+    },
+    "workarounds": [],
+    "segmentSignals": [],
+    "sentiment": {
+      "overall": "NEGATIVE",
+      "emotions": [
+        "frustration",
+        "distrust"
+      ]
+    },
+    "decisionOutcome": {
+      "status": "UNKNOWN",
+      "evidence": null
+    },
+    "metricConnection": {
+      "relevance": "HIGH",
+      "reason": "User's trust issues could prevent them from purchasing items from their wishlist."
+    },
+    "evidenceQuote": "they have are scamming they sent me different product also didn't refunded my money",
+    "researcherNote": "User's experience with receiving the wrong product has led to a significant decrease in their purchase intent."
+  },
+  {
+    "reviewId": "df64da02-d831-4da9-845d-25a648504576",
+    "relevance": {
+      "class": "GENERAL_ECOMMERCE",
+      "reason": "User appreciates low prices and good quality, indicating positive shopping experience.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "journeyStages": [
+      "discovery/browsing",
+      "purchase consideration"
+    ],
+    "wishlistBehavior": {
+      "jobCategory": "genuine intention to buy later",
+      "jobDescription": "User is likely saving items for future purchase due to positive experience.",
+      "supportingEvidence": "you find any products in low prices in good quality"
+    },
+    "purchaseIntent": {
+      "level": "HIGH",
+      "reason": "User expresses satisfaction with product quality and pricing.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "barriers": [],
+    "uncertainties": [],
+    "postponement": {
+      "present": "NO",
+      "reason": null,
+      "triggerOrCondition": null
+    },
+    "decisionCriteria": [
+      {
+        "criterion": "price/value",
+        "evidence": "you find any products in low prices"
+      },
+      {
+        "criterion": "quality",
+        "evidence": "good quality"
+      }
+    ],
+    "comparisonBehavior": {
+      "present": "UNKNOWN",
+      "itemsCompared": null,
+      "comparisonDimensions": [],
+      "difficulty": null,
+      "outcome": null
+    },
+    "externalInformationSeeking": {
+      "present": "NO",
+      "sources": [],
+      "informationSought": [],
+      "platformInformationGap": null,
+      "evidence": null
+    },
+    "socialValidation": {
+      "present": "NO",
+      "source": null,
+      "validationNeeded": null,
+      "evidence": null
+    },
+    "workarounds": [],
+    "segmentSignals": [
+      {
+        "segment": "frequent shopper",
+        "evidence": "I have been using this app from last 5 years"
+      }
+    ],
+    "sentiment": {
+      "overall": "POSITIVE",
+      "emotions": [
+        "satisfaction"
+      ]
+    },
+    "decisionOutcome": {
+      "status": "UNKNOWN",
+      "evidence": null
+    },
+    "metricConnection": {
+      "relevance": "MEDIUM",
+      "reason": "User's positive experience may encourage them to purchase from their wishlist."
+    },
+    "evidenceQuote": "you find any products in low prices in good quality",
+    "researcherNote": "User's satisfaction with product quality and pricing indicates a high likelihood of future purchases."
+  },
+  {
+    "reviewId": "160973ea-5f87-4274-a57a-eeaca84ca253",
+    "relevance": {
+      "class": "GENERAL_ECOMMERCE",
+      "reason": "User expresses frustration with receiving the wrong product and lack of support.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "journeyStages": [
+      "purchase consideration"
+    ],
+    "wishlistBehavior": {
+      "jobCategory": null,
+      "jobDescription": null,
+      "supportingEvidence": null
+    },
+    "purchaseIntent": {
+      "level": "LOW",
+      "reason": "User expresses strong dissatisfaction and recommends against purchasing.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "barriers": [
+      {
+        "category": "authenticity/trust",
+        "description": "User feels misled due to receiving the wrong product and lack of assistance.",
+        "evidence": "Fraud Myntra delivered the wrong product by myntra and still didn't get any help from myntra team",
+        "severity": "HIGH",
+        "evidenceStrength": "EXPLICIT"
+      }
+    ],
+    "uncertainties": [],
+    "postponement": {
+      "present": "YES",
+      "reason": "User is hesitant to purchase due to negative experience.",
+      "triggerOrCondition": "User is waiting for resolution of their complaint."
+    },
+    "decisionCriteria": [],
+    "comparisonBehavior": {
+      "present": "UNKNOWN",
+      "itemsCompared": null,
+      "comparisonDimensions": [],
+      "difficulty": null,
+      "outcome": null
+    },
+    "externalInformationSeeking": {
+      "present": "NO",
+      "sources": [],
+      "informationSought": [],
+      "platformInformationGap": null,
+      "evidence": null
+    },
+    "socialValidation": {
+      "present": "NO",
+      "source": null,
+      "validationNeeded": null,
+      "evidence": null
+    },
+    "workarounds": [],
+    "segmentSignals": [],
+    "sentiment": {
+      "overall": "NEGATIVE",
+      "emotions": [
+        "frustration",
+        "distrust"
+      ]
+    },
+    "decisionOutcome": {
+      "status": "UNKNOWN",
+      "evidence": null
+    },
+    "metricConnection": {
+      "relevance": "HIGH",
+      "reason": "User's negative experience could deter them from purchasing wishlisted items."
+    },
+    "evidenceQuote": "still didn't get any help from myntra team",
+    "researcherNote": "User's strong dissatisfaction with service and product delivery significantly lowers their purchase intent."
+  },
+  {
+    "reviewId": "479c9081-7649-46bc-b9c8-110d6eba4ddd",
+    "relevance": {
+      "class": "GENERAL_ECOMMERCE",
+      "reason": "User appreciates the originality and affordability of products.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "journeyStages": [
+      "discovery/browsing",
+      "purchase consideration"
+    ],
+    "wishlistBehavior": {
+      "jobCategory": "genuine intention to buy later",
+      "jobDescription": "User is likely saving items for future purchase due to positive experience.",
+      "supportingEvidence": "100% original product and low budget friendly price"
+    },
+    "purchaseIntent": {
+      "level": "HIGH",
+      "reason": "User expresses satisfaction with product originality and pricing.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "barriers": [],
+    "uncertainties": [],
+    "postponement": {
+      "present": "NO",
+      "reason": null,
+      "triggerOrCondition": null
+    },
+    "decisionCriteria": [
+      {
+        "criterion": "authenticity",
+        "evidence": "100% original product"
+      },
+      {
+        "criterion": "price/value",
+        "evidence": "low budget friendly price"
+      }
+    ],
+    "comparisonBehavior": {
+      "present": "UNKNOWN",
+      "itemsCompared": null,
+      "comparisonDimensions": [],
+      "difficulty": null,
+      "outcome": null
+    },
+    "externalInformationSeeking": {
+      "present": "NO",
+      "sources": [],
+      "informationSought": [],
+      "platformInformationGap": null,
+      "evidence": null
+    },
+    "socialValidation": {
+      "present": "NO",
+      "source": null,
+      "validationNeeded": null,
+      "evidence": null
+    },
+    "workarounds": [],
+    "segmentSignals": [
+      {
+        "segment": "frequent shopper",
+        "evidence": "User expresses satisfaction with the platform."
+      }
+    ],
+    "sentiment": {
+      "overall": "POSITIVE",
+      "emotions": [
+        "satisfaction"
+      ]
+    },
+    "decisionOutcome": {
+      "status": "UNKNOWN",
+      "evidence": null
+    },
+    "metricConnection": {
+      "relevance": "MEDIUM",
+      "reason": "User's positive experience may encourage them to purchase from their wishlist."
+    },
+    "evidenceQuote": "100% original product and low budget friendly price",
+    "researcherNote": "User's satisfaction with product authenticity and affordability indicates a high likelihood of future purchases."
+  },
+  {
+    "reviewId": "7e4c0c3b-ae0b-4677-adcc-604b1c989f5a",
+    "relevance": {
+      "class": "GENERAL_ECOMMERCE",
+      "reason": "User appreciates the app's offerings and product authenticity.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "journeyStages": [
+      "discovery/browsing",
+      "purchase consideration"
+    ],
+    "wishlistBehavior": {
+      "jobCategory": "genuine intention to buy later",
+      "jobDescription": "User is likely saving items for future purchase due to positive experience.",
+      "supportingEvidence": "nice app with 100 percent original brands"
+    },
+    "purchaseIntent": {
+      "level": "HIGH",
+      "reason": "User expresses satisfaction with the app and its offerings.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "barriers": [],
+    "uncertainties": [],
+    "postponement": {
+      "present": "NO",
+      "reason": null,
+      "triggerOrCondition": null
+    },
+    "decisionCriteria": [
+      {
+        "criterion": "authenticity",
+        "evidence": "100 percent original brands"
+      }
+    ],
+    "comparisonBehavior": {
+      "present": "UNKNOWN",
+      "itemsCompared": null,
+      "comparisonDimensions": [],
+      "difficulty": null,
+      "outcome": null
+    },
+    "externalInformationSeeking": {
+      "present": "NO",
+      "sources": [],
+      "informationSought": [],
+      "platformInformationGap": null,
+      "evidence": null
+    },
+    "socialValidation": {
+      "present": "NO",
+      "source": null,
+      "validationNeeded": null,
+      "evidence": null
+    },
+    "workarounds": [],
+    "segmentSignals": [
+      {
+        "segment": "frequent shopper",
+        "evidence": "User expresses satisfaction with the app."
+      }
+    ],
+    "sentiment": {
+      "overall": "POSITIVE",
+      "emotions": [
+        "satisfaction"
+      ]
+    },
+    "decisionOutcome": {
+      "status": "UNKNOWN",
+      "evidence": null
+    },
+    "metricConnection": {
+      "relevance": "MEDIUM",
+      "reason": "User's positive experience may encourage them to purchase from their wishlist."
+    },
+    "evidenceQuote": "nice app with 100 percent original brands",
+    "researcherNote": "User's satisfaction with the app and product authenticity indicates a high likelihood of future purchases."
+  },
+  {
+    "reviewId": "bd856ef4-119d-4079-9fc5-169a3903f57c",
+    "relevance": {
+      "class": "GENERAL_ECOMMERCE",
+      "reason": "User expresses dissatisfaction with refund process, impacting overall experience.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "journeyStages": [
+      "purchase consideration"
+    ],
+    "wishlistBehavior": {
+      "jobCategory": null,
+      "jobDescription": null,
+      "supportingEvidence": null
+    },
+    "purchaseIntent": {
+      "level": "LOW",
+      "reason": "User expresses frustration with refund process.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "barriers": [
+      {
+        "category": "returns/exchange friction",
+        "description": "User is frustrated with the refund process.",
+        "evidence": "for real jus bcz my order refund haven't received",
+        "severity": "HIGH",
+        "evidenceStrength": "EXPLICIT"
+      }
+    ],
+    "uncertainties": [],
+    "postponement": {
+      "present": "YES",
+      "reason": "User is hesitant to purchase due to unresolved refund issue.",
+      "triggerOrCondition": "User is waiting for refund resolution."
+    },
+    "decisionCriteria": [],
+    "comparisonBehavior": {
+      "present": "UNKNOWN",
+      "itemsCompared": null,
+      "comparisonDimensions": [],
+      "difficulty": null,
+      "outcome": null
+    },
+    "externalInformationSeeking": {
+      "present": "NO",
+      "sources": [],
+      "informationSought": [],
+      "platformInformationGap": null,
+      "evidence": null
+    },
+    "socialValidation": {
+      "present": "NO",
+      "source": null,
+      "validationNeeded": null,
+      "evidence": null
+    },
+    "workarounds": [],
+    "segmentSignals": [],
+    "sentiment": {
+      "overall": "NEGATIVE",
+      "emotions": [
+        "frustration"
+      ]
+    },
+    "decisionOutcome": {
+      "status": "UNKNOWN",
+      "evidence": null
+    },
+    "metricConnection": {
+      "relevance": "HIGH",
+      "reason": "User's frustration with the refund process could deter them from purchasing wishlisted items."
+    },
+    "evidenceQuote": "for real jus bcz my order refund haven't received",
+    "researcherNote": "User's frustration with the refund process significantly lowers their purchase intent."
+  },
+  {
+    "reviewId": "1d380a14-c05b-49d3-a1d1-46ac51f31c53",
+    "relevance": {
+      "class": "GENERAL_ECOMMERCE",
+      "reason": "User expresses satisfaction with quality and service, indicating positive shopping experience.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "journeyStages": [
+      "discovery/browsing",
+      "purchase consideration"
+    ],
+    "wishlistBehavior": {
+      "jobCategory": "genuine intention to buy later",
+      "jobDescription": "User is likely saving items for future purchase due to positive experience.",
+      "supportingEvidence": "very good quality with good service"
+    },
+    "purchaseIntent": {
+      "level": "HIGH",
+      "reason": "User expresses satisfaction with quality and service.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "barriers": [],
+    "uncertainties": [],
+    "postponement": {
+      "present": "NO",
+      "reason": null,
+      "triggerOrCondition": null
+    },
+    "decisionCriteria": [
+      {
+        "criterion": "quality",
+        "evidence": "very good quality"
+      },
+      {
+        "criterion": "service",
+        "evidence": "good service"
+      }
+    ],
+    "comparisonBehavior": {
+      "present": "UNKNOWN",
+      "itemsCompared": null,
+      "comparisonDimensions": [],
+      "difficulty": null,
+      "outcome": null
+    },
+    "externalInformationSeeking": {
+      "present": "NO",
+      "sources": [],
+      "informationSought": [],
+      "platformInformationGap": null,
+      "evidence": null
+    },
+    "socialValidation": {
+      "present": "NO",
+      "source": null,
+      "validationNeeded": null,
+      "evidence": null
+    },
+    "workarounds": [],
+    "segmentSignals": [
+      {
+        "segment": "frequent shopper",
+        "evidence": "User expresses satisfaction with the platform."
+      }
+    ],
+    "sentiment": {
+      "overall": "POSITIVE",
+      "emotions": [
+        "satisfaction"
+      ]
+    },
+    "decisionOutcome": {
+      "status": "UNKNOWN",
+      "evidence": null
+    },
+    "metricConnection": {
+      "relevance": "MEDIUM",
+      "reason": "User's positive experience may encourage them to purchase from their wishlist."
+    },
+    "evidenceQuote": "very good quality with good service",
+    "researcherNote": "User's satisfaction with quality and service indicates a high likelihood of future purchases."
+  },
+  {
+    "reviewId": "319d108c-881b-460e-9740-58be068d906b",
+    "relevance": {
+      "class": "GENERAL_ECOMMERCE",
+      "reason": "User expresses satisfaction with the app and its offerings.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "journeyStages": [
+      "discovery/browsing",
+      "purchase consideration"
+    ],
+    "wishlistBehavior": {
+      "jobCategory": "genuine intention to buy later",
+      "jobDescription": "User is likely saving items for future purchase due to positive experience.",
+      "supportingEvidence": "wonderful app with amazing products"
+    },
+    "purchaseIntent": {
+      "level": "HIGH",
+      "reason": "User expresses satisfaction with the app and its offerings.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "barriers": [],
+    "uncertainties": [],
+    "postponement": {
+      "present": "NO",
+      "reason": null,
+      "triggerOrCondition": null
+    },
+    "decisionCriteria": [
+      {
+        "criterion": "quality",
+        "evidence": "wonderful app with amazing products"
+      }
+    ],
+    "comparisonBehavior": {
+      "present": "UNKNOWN",
+      "itemsCompared": null,
+      "comparisonDimensions": [],
+      "difficulty": null,
+      "outcome": null
+    },
+    "externalInformationSeeking": {
+      "present": "NO",
+      "sources": [],
+      "informationSought": [],
+      "platformInformationGap": null,
+      "evidence": null
+    },
+    "socialValidation": {
+      "present": "NO",
+      "source": null,
+      "validationNeeded": null,
+      "evidence": null
+    },
+    "workarounds": [],
+    "segmentSignals": [
+      {
+        "segment": "frequent shopper",
+        "evidence": "User expresses satisfaction with the app."
+      }
+    ],
+    "sentiment": {
+      "overall": "POSITIVE",
+      "emotions": [
+        "satisfaction"
+      ]
+    },
+    "decisionOutcome": {
+      "status": "UNKNOWN",
+      "evidence": null
+    },
+    "metricConnection": {
+      "relevance": "MEDIUM",
+      "reason": "User's positive experience may encourage them to purchase from their wishlist."
+    },
+    "evidenceQuote": "wonderful app with amazing products",
+    "researcherNote": "User's satisfaction with the app and its offerings indicates a high likelihood of future purchases."
+  },
+  {
+    "reviewId": "423f2522-2ba6-4ac2-8692-23b6d7ee1cec",
+    "relevance": {
+      "class": "IRRELEVANT",
+      "reason": "The review does not provide insights related to wishlist behavior or purchase intent.",
+      "evidenceStrength": "EXPLICIT"
+    },
+    "journeyStages": [],
+    "wishlistBehavior": {
+      "jobCategory": null,
+      "jobDescription": null,
+      "supportingEvidence": null
+    },
+    "purchaseIntent": {
+      "level": "UNKNOWN",
+      "reason": null,
+      "evidenceStrength": "UNKNOWN"
+    },
+    "barriers": [],
+    "uncertainties": [],
+    "postponement": {
+      "present": "UNKNOWN",
+      "reason": null,
+      "triggerOrCondition": null
+    },
+    "decisionCriteria": [],
+    "comparisonBehavior": {
+      "present": "UNKNOWN",
+      "itemsCompared": null,
+      "comparisonDimensions": [],
+      "difficulty": null,
+      "outcome": null
+    },
+    "externalInformationSeeking": {
+      "present": "UNKNOWN",
+      "sources": [],
+      "informationSought": [],
+      "platformInformationGap": null,
+      "evidence": null
+    },
+    "socialValidation": {
+      "present": "UNKNOWN",
+      "source": null,
+      "validationNeeded": null,
+      "evidence": null
+    },
+    "workarounds": [],
+    "segmentSignals": [
+      {
+        "segment": "frequent shopper",
+        "evidence": "everyone must use this app"
+      }
+    ],
+    "sentiment": {
+      "overall": "POSITIVE",
+      "emotions": [
+        "satisfaction"
+      ]
+    },
+    "decisionOutcome": {
+      "status": "UNKNOWN",
+      "evidence": null
+    },
+    "metricConnection": {
+      "relevance": "NONE",
+      "reason": "The review does not address wishlist or purchase behavior."
+    },
+    "evidenceQuote": "everyone must use this app",
+    "researcherNote": "The review indicates a positive sentiment towards the app but lacks specific insights into wishlist behavior."
   }
 ]

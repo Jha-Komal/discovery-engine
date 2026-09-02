@@ -1,6 +1,6 @@
 {
   "totalCount": 2055,
-  "analyzedCount": 2044,
+  "analyzedCount": 2054,
   "averageRating": 3.5199430199430197,
   "sourceDistribution": {
     "app_store": 494,
@@ -9,18 +9,18 @@
     "reddit": 164
   },
   "relevanceClassDistribution": {
-    "GENERAL_ECOMMERCE": 1647,
+    "GENERAL_ECOMMERCE": 1656,
     "ADJACENT_DECISION": 26,
-    "IRRELEVANT": 350,
+    "IRRELEVANT": 351,
     "DIRECT_WISHLIST": 21
   },
   "journeyStageFrequency": {
-    "discovery/browsing": 139,
+    "discovery/browsing": 144,
     "product evaluation": 81,
     "checkout": 180,
     "returns/exchange": 223,
     "post-purchase": 74,
-    "purchase consideration": 186,
+    "purchase consideration": 195,
     "delivery": 44,
     "unknown": 59,
     "wishlist/save": 18,
@@ -30,7 +30,7 @@
   },
   "wishlistJobCategoryDistribution": {
     "waiting to make a decision": 1,
-    "genuine intention to buy later": 58,
+    "genuine intention to buy later": 63,
     "bookmarking for future reference": 5,
     "comparing alternatives": 1,
     "sharing/seeking validation": 1,
@@ -46,7 +46,7 @@
     "genuine intention to buy later": {
       "DIRECT_WISHLIST": 6,
       "ADJACENT_DECISION": 8,
-      "GENERAL_ECOMMERCE": 44,
+      "GENERAL_ECOMMERCE": 49,
       "IRRELEVANT": 0
     },
     "bookmarking for future reference": {
@@ -75,9 +75,9 @@
     }
   },
   "purchaseIntentDistribution": {
-    "UNKNOWN": 1277,
-    "HIGH": 294,
-    "LOW": 437,
+    "UNKNOWN": 1278,
+    "HIGH": 299,
+    "LOW": 441,
     "MEDIUM": 36
   },
   "purchaseIntentByRelevanceClass": {
@@ -85,18 +85,18 @@
       "DIRECT_WISHLIST": 6,
       "ADJACENT_DECISION": 6,
       "GENERAL_ECOMMERCE": 924,
-      "IRRELEVANT": 341
+      "IRRELEVANT": 342
     },
     "HIGH": {
       "DIRECT_WISHLIST": 7,
       "ADJACENT_DECISION": 4,
-      "GENERAL_ECOMMERCE": 283,
+      "GENERAL_ECOMMERCE": 288,
       "IRRELEVANT": 0
     },
     "LOW": {
       "DIRECT_WISHLIST": 7,
       "ADJACENT_DECISION": 4,
-      "GENERAL_ECOMMERCE": 417,
+      "GENERAL_ECOMMERCE": 421,
       "IRRELEVANT": 9
     },
     "MEDIUM": {
@@ -110,10 +110,10 @@
     "customer_service": 1,
     "quality_uncertainty": 1,
     "material/fabric uncertainty": 2,
-    "authenticity/trust": 135,
+    "authenticity/trust": 138,
     "fit uncertainty": 20,
     "delivery timing": 225,
-    "returns/exchange friction": 227,
+    "returns/exchange friction": 228,
     "insufficient product information": 10,
     "customer service": 145,
     "size uncertainty": 10,
@@ -175,7 +175,7 @@
     "authenticity/trust": {
       "DIRECT_WISHLIST": 0,
       "ADJACENT_DECISION": 1,
-      "GENERAL_ECOMMERCE": 134,
+      "GENERAL_ECOMMERCE": 137,
       "IRRELEVANT": 0
     },
     "fit uncertainty": {
@@ -193,7 +193,7 @@
     "returns/exchange friction": {
       "DIRECT_WISHLIST": 0,
       "ADJACENT_DECISION": 0,
-      "GENERAL_ECOMMERCE": 227,
+      "GENERAL_ECOMMERCE": 228,
       "IRRELEVANT": 0
     },
     "insufficient product information": {
@@ -426,7 +426,7 @@
     }
   },
   "barrierSeverityDistribution": {
-    "HIGH": 1090,
+    "HIGH": 1094,
     "MEDIUM": 62,
     "LOW": 1
   },
@@ -554,9 +554,9 @@
     }
   },
   "postponementPresentDistribution": {
-    "UNKNOWN": 1545,
-    "YES": 261,
-    "NO": 238
+    "UNKNOWN": 1546,
+    "YES": 265,
+    "NO": 243
   },
   "postponementReasonFrequency": {
     "User is hesitant to purchase due to past negative experiences.": 1,
@@ -661,6 +661,7 @@
     "Distrust in the platform.": 1,
     "Waiting for refund.": 4,
     "Concern over product quality.": 4,
+    "User is hesitant to purchase due to previous negative experience.": 1,
     "Frustration with delivery and customer service.": 2,
     "Disappointment with product quality and return process.": 1,
     "Doubt about product authenticity.": 1,
@@ -682,6 +683,9 @@
     "User is unlikely to purchase again due to negative experience.": 2,
     "User is unlikely to purchase due to dissatisfaction with fees.": 1,
     "User is unlikely to purchase again due to negative experience with returns.": 1,
+    "User is hesitant to purchase due to trust issues.": 1,
+    "User is hesitant to purchase due to negative experience.": 1,
+    "User is hesitant to purchase due to unresolved refund issue.": 1,
     "User is uncertain about the platform's reliability.": 1,
     "User is waiting for correct items to arrive.": 1,
     "User may delay future purchases due to negative experience.": 2,
@@ -1359,6 +1363,12 @@
       "GENERAL_ECOMMERCE": 4,
       "IRRELEVANT": 0
     },
+    "User is hesitant to purchase due to previous negative experience.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
     "Frustration with delivery and customer service.": {
       "DIRECT_WISHLIST": 0,
       "ADJACENT_DECISION": 0,
@@ -1480,6 +1490,24 @@
       "IRRELEVANT": 0
     },
     "User is unlikely to purchase again due to negative experience with returns.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to purchase due to trust issues.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to purchase due to negative experience.": {
+      "DIRECT_WISHLIST": 0,
+      "ADJACENT_DECISION": 0,
+      "GENERAL_ECOMMERCE": 1,
+      "IRRELEVANT": 0
+    },
+    "User is hesitant to purchase due to unresolved refund issue.": {
       "DIRECT_WISHLIST": 0,
       "ADJACENT_DECISION": 0,
       "GENERAL_ECOMMERCE": 1,
@@ -1867,9 +1895,9 @@
   "decisionCriteriaFrequency": {
     "material": 2,
     "comfort": 3,
-    "quality": 95,
+    "quality": 98,
     "fit": 20,
-    "price/value": 18,
+    "price/value": 20,
     "size": 6,
     "suitability": 1,
     "performance": 1,
@@ -1882,7 +1910,7 @@
     "style/look": 8,
     "product variety": 5,
     "customer support": 2,
-    "authenticity": 3,
+    "authenticity": 5,
     "customer service": 2,
     "value": 2,
     "durability": 1,
@@ -1890,7 +1918,7 @@
     "functionality": 1,
     "returns": 3,
     "price": 1,
-    "service": 2,
+    "service": 3,
     "service quality": 2,
     "delivery": 5,
     "app experience": 1,
@@ -1916,7 +1944,7 @@
     "quality": {
       "DIRECT_WISHLIST": 1,
       "ADJACENT_DECISION": 4,
-      "GENERAL_ECOMMERCE": 90,
+      "GENERAL_ECOMMERCE": 93,
       "IRRELEVANT": 0
     },
     "fit": {
@@ -1928,7 +1956,7 @@
     "price/value": {
       "DIRECT_WISHLIST": 0,
       "ADJACENT_DECISION": 5,
-      "GENERAL_ECOMMERCE": 13,
+      "GENERAL_ECOMMERCE": 15,
       "IRRELEVANT": 0
     },
     "size": {
@@ -2006,7 +2034,7 @@
     "authenticity": {
       "DIRECT_WISHLIST": 0,
       "ADJACENT_DECISION": 0,
-      "GENERAL_ECOMMERCE": 3,
+      "GENERAL_ECOMMERCE": 5,
       "IRRELEVANT": 0
     },
     "customer service": {
@@ -2054,7 +2082,7 @@
     "service": {
       "DIRECT_WISHLIST": 0,
       "ADJACENT_DECISION": 0,
-      "GENERAL_ECOMMERCE": 2,
+      "GENERAL_ECOMMERCE": 3,
       "IRRELEVANT": 0
     },
     "service quality": {
@@ -2107,7 +2135,7 @@
     }
   },
   "comparisonPresentDistribution": {
-    "UNKNOWN": 1796,
+    "UNKNOWN": 1806,
     "NO": 234,
     "YES": 14
   },
@@ -2165,8 +2193,8 @@
     }
   },
   "socialValidationPresentDistribution": {
-    "UNKNOWN": 958,
-    "NO": 1079,
+    "UNKNOWN": 959,
+    "NO": 1088,
     "YES": 7
   },
   "workaroundFrequency": {
@@ -2195,7 +2223,7 @@
     }
   },
   "segmentSignalFrequency": {
-    "frequent shopper": 72,
+    "frequent shopper": 78,
     "repeat purchaser": 1,
     "high uncertainty shopper": 5,
     "occasional shopper": 5,
@@ -2225,8 +2253,8 @@
     "frequent shopper": {
       "DIRECT_WISHLIST": 0,
       "ADJACENT_DECISION": 0,
-      "GENERAL_ECOMMERCE": 72,
-      "IRRELEVANT": 0
+      "GENERAL_ECOMMERCE": 77,
+      "IRRELEVANT": 1
     },
     "repeat purchaser": {
       "DIRECT_WISHLIST": 0,
@@ -2374,16 +2402,16 @@
     }
   },
   "sentimentDistribution": {
-    "POSITIVE": 843,
-    "NEGATIVE": 1012,
+    "POSITIVE": 849,
+    "NEGATIVE": 1016,
     "NEUTRAL": 186,
     "MIXED": 3
   },
   "emotionFrequency": {
-    "frustration": 942,
+    "frustration": 946,
     "disappointment": 291,
-    "satisfaction": 237,
-    "distrust": 118,
+    "satisfaction": 243,
+    "distrust": 121,
     "trust": 31,
     "dissatisfaction": 9,
     "confusion": 21,
@@ -2406,7 +2434,7 @@
     "uncertainty": 1
   },
   "decisionOutcomeDistribution": {
-    "UNKNOWN": 1878,
+    "UNKNOWN": 1888,
     "ABANDONED": 95,
     "POSTPONED": 27,
     "PURCHASED": 43,
@@ -2414,8 +2442,8 @@
   },
   "metricRelevanceDistribution": {
     "LOW": 487,
-    "HIGH": 836,
-    "MEDIUM": 269,
-    "NONE": 452
+    "HIGH": 840,
+    "MEDIUM": 274,
+    "NONE": 453
   }
 }

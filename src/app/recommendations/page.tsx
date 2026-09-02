@@ -23,10 +23,32 @@ function Section({ priority, items }: { priority: Priority; items: Recommendatio
         {items.map((rec) => (
           <Card key={rec.id}>
             <CardHeader className="pb-2">
-              <CardTitle>{rec.title}</CardTitle>
+              <CardTitle>Recommendation: {rec.title}</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="space-y-2">
               <p className="text-sm leading-relaxed text-muted">{rec.description}</p>
+              <dl className="space-y-1 text-sm">
+                <div>
+                  <dt className="inline font-semibold">Evidence: </dt>
+                  <dd className="inline text-muted">{rec.evidence}</dd>
+                </div>
+                <div>
+                  <dt className="inline font-semibold">Observed behaviour: </dt>
+                  <dd className="inline text-muted">{rec.observedBehavior}</dd>
+                </div>
+                <div>
+                  <dt className="inline font-semibold">Affected journey: </dt>
+                  <dd className="inline text-muted">{rec.affectedJourney}</dd>
+                </div>
+                <div>
+                  <dt className="inline font-semibold">Confidence: </dt>
+                  <dd className="inline text-muted">{rec.confidence}</dd>
+                </div>
+                <div>
+                  <dt className="inline font-semibold">Unknowns: </dt>
+                  <dd className="inline text-muted">{rec.unknowns}</dd>
+                </div>
+              </dl>
             </CardContent>
           </Card>
         ))}

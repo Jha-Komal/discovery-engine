@@ -1,50 +1,90 @@
 [
   {
-    "id": "6a4625ca-4b5d-430a-b53d-77c6682a98b0",
+    "id": "935b6d41-3e50-452e-86cd-d5e8e371bbf4",
     "priority": "quick_win",
-    "title": "Enhance Product Information Display",
-    "description": "Improve the visibility of detailed product information, including size guides and fabric details, on wishlist items. This addresses the barrier of 'insufficient product information' (10 occurrences) and 'fit uncertainty' (20 occurrences), which currently lead to decision delays."
+    "title": "Implement Price Stability Notifications",
+    "description": "Introduce a feature that notifies users when the price of a wishlist item stabilizes after fluctuations. This addresses the high occurrence of price/value uncertainty (21 occurrences) and helps frequent shoppers who delay purchases due to price changes.",
+    "evidence": "21 occurrences",
+    "observedBehavior": "delaying purchase due to price fluctuations",
+    "affectedJourney": "wishlist/save → purchase consideration",
+    "confidence": "HIGH",
+    "unknowns": "Why items were saved and intent at save time."
   },
   {
-    "id": "f3caf33c-5d32-47d6-adef-41bbc9042ae0",
+    "id": "6a998f6a-a273-4265-b079-5bf9475dab57",
     "priority": "quick_win",
-    "title": "Streamlined Return Process Information",
-    "description": "Create a dedicated section for clear return policies and processes on product pages and wishlists. This targets the 'returns/exchange friction' barrier (227 occurrences) that is causing users to abandon their purchases."
+    "title": "Enhance App Performance for Wishlist Management",
+    "description": "Optimize the app experience specifically for wishlist management to reduce friction and improve usability. This targets the 46 occurrences of app experience issues affecting user decisions.",
+    "evidence": "46 occurrences",
+    "observedBehavior": "frustration with app usability",
+    "affectedJourney": "wishlist/save → product evaluation",
+    "confidence": "HIGH",
+    "unknowns": "Exact blockers in the app experience."
   },
   {
-    "id": "0b28c5b7-6c0e-4d65-a664-04193c0c59b6",
+    "id": "2c223fe1-7c2c-4b45-8c7b-226478e022e6",
     "priority": "medium",
-    "title": "Fit Visualization Tool",
-    "description": "Develop a fit visualization tool that allows users to see how items fit based on their measurements. This addresses the high uncertainty around fit (20 occurrences) and could help high uncertainty shoppers make more confident purchase decisions."
+    "title": "Develop Inventory Availability Alerts",
+    "description": "Create a feature that alerts users when items in their wishlist become available or restocked. This directly addresses the inventory/size availability issues (14 occurrences) that lead to postponement for high-intent users.",
+    "evidence": "14 occurrences",
+    "observedBehavior": "waiting for resolution of inventory issues",
+    "affectedJourney": "wishlist/save → purchase consideration",
+    "confidence": "MEDIUM",
+    "unknowns": "Impact of inventory issues on conversion rates."
   },
   {
-    "id": "c8d7eccb-914f-4d3a-8682-543a702110dd",
+    "id": "c22b087e-fc20-4912-bdd0-eb5565bcf294",
     "priority": "medium",
-    "title": "Delivery Time Estimates on Wishlist Items",
-    "description": "Integrate estimated delivery times for wishlist items based on user location. This directly addresses the 'delivery timing' barrier (225 occurrences) that leads to frustration and postponement in purchasing."
+    "title": "Integrate User Reviews and Ratings in Wishlist",
+    "description": "Allow users to view product reviews and ratings directly from their wishlist to assist in decision-making. This addresses the need for external validation (3 occurrences) and helps users overcome uncertainties.",
+    "evidence": "3 occurrences",
+    "observedBehavior": "seeking external validation",
+    "affectedJourney": "wishlist/save → product evaluation",
+    "confidence": "MEDIUM",
+    "unknowns": "User preferences for review sources and formats."
   },
   {
-    "id": "f3bf4a64-1b51-4ea3-845c-e298f532b1c0",
+    "id": "54824344-6052-482e-905f-c8ecfd693e64",
     "priority": "high",
-    "title": "Personalized Recommendations Based on Wishlist",
-    "description": "Implement a recommendation engine that suggests similar items based on wishlist contents, focusing on quality and fit. This could help high uncertainty shoppers (5 occurrences) by providing alternatives that may better meet their needs."
+    "title": "Revamp Product Information Pages",
+    "description": "Enhance product information pages with detailed descriptions, high-quality images, and fabric composition details to reduce quality uncertainty (99 occurrences). This will help users make informed decisions and reduce delays.",
+    "evidence": "99 occurrences",
+    "observedBehavior": "uncertainty about product quality",
+    "affectedJourney": "product evaluation → move-to-bag",
+    "confidence": "MEDIUM",
+    "unknowns": "Specific aspects of product information that users find lacking."
   },
   {
-    "id": "6240f33f-a77a-48c1-add5-a0c5bcc8c0af",
+    "id": "27c8c70b-9cd1-4b43-961e-e3df010da708",
     "priority": "high",
-    "title": "User Feedback Loop for Wishlist Items",
-    "description": "Create a feedback mechanism where users can share their experiences with wishlist items post-purchase. This will help gather insights on 'genuine intention to buy later' (58 occurrences) and improve future recommendations."
+    "title": "Launch a Trust-Building Campaign",
+    "description": "Implement a campaign that focuses on building trust through transparency about product sourcing, quality assurance, and customer service. This addresses the 138 occurrences of authenticity/trust issues that deter purchases.",
+    "evidence": "138 occurrences",
+    "observedBehavior": "distrust in product authenticity",
+    "affectedJourney": "product evaluation → purchase consideration",
+    "confidence": "MEDIUM",
+    "unknowns": "Effectiveness of trust-building measures on conversion rates."
   },
   {
-    "id": "9df431ed-3d92-499a-92c7-f3551585b48a",
+    "id": "5939eb50-cb55-49ef-9690-d341269bcfb3",
     "priority": "long_term",
-    "title": "Comprehensive User Experience Overhaul",
-    "description": "Conduct a full redesign of the wishlist and checkout experience, focusing on reducing friction points identified in the report, such as delivery timing and returns friction. This transformative initiative aims to significantly enhance user satisfaction and conversion rates."
+    "title": "Create a Comprehensive User Feedback Loop",
+    "description": "Establish a systematic approach to gather user feedback on wishlist functionality and barriers to purchase. This will help identify ongoing issues and improve the overall user experience, addressing the unknowns in user behavior.",
+    "evidence": "N/A",
+    "observedBehavior": "gathering insights on user frustrations",
+    "affectedJourney": "all stages",
+    "confidence": "INSUFFICIENT",
+    "unknowns": "Why items were saved and specific blockers in the purchase process."
   },
   {
-    "id": "249fb213-f168-4c37-8080-0a72707f0a25",
+    "id": "17469865-7ca8-43ee-b1df-37703025bf68",
     "priority": "long_term",
-    "title": "AI-Powered Customer Support Chatbot",
-    "description": "Develop an AI-powered chatbot that can assist users with common queries related to wishlist items, delivery, and returns. This initiative addresses the high frequency of customer service-related issues (145 occurrences) and aims to improve user trust and engagement."
+    "title": "Implement AI-Powered Personalized Recommendations",
+    "description": "Develop an AI-driven recommendation engine that suggests items based on user behavior and preferences, enhancing the shopping experience and addressing the need for better options (1 occurrence).",
+    "evidence": "1 occurrence",
+    "observedBehavior": "waiting for suitable options",
+    "affectedJourney": "discovery/browsing → wishlist/save",
+    "confidence": "INSUFFICIENT",
+    "unknowns": "User preferences for recommendations and effectiveness of AI suggestions."
   }
 ]

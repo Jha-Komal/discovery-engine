@@ -242,6 +242,14 @@ export interface Recommendation {
   priority: Priority;
   title: string;
   description: string;
+  /** e.g. "20 occurrences" — pulled from the opportunity's EVIDENCE count in the research report */
+  evidence: string;
+  observedBehavior: string;
+  /** e.g. "product evaluation → move-to-bag" */
+  affectedJourney: string;
+  confidence: 'HIGH' | 'MEDIUM' | 'LOW' | 'INSUFFICIENT';
+  /** What still needs interview/data validation before treating this as settled */
+  unknowns: string;
 }
 
 export interface StatusState {

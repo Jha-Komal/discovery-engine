@@ -21,12 +21,24 @@ Generate concrete, specific product recommendations across 4 priority tiers:
 
 Each recommendation must tie back to a specific opportunity area or statistic — no generic advice like "improve UX."
 
+For each recommendation, also carry over the evidence backing behind the opportunity hypothesis it addresses:
+- evidence: the occurrence count / evidence volume from that opportunity's EVIDENCE section in the report (e.g. "20 occurrences"). If the report gives a range or multiple sources, summarize it in a few words.
+- observedBehavior: the OBSERVED BEHAVIOR from that opportunity, in a few words (e.g. "checking reviews/photos, seeking external validation, delaying purchase").
+- affectedJourney: the journey stage(s) this touches, as "<stage> → <stage>" if the report implies a transition, otherwise a single stage.
+- confidence: copy the opportunity's EVIDENCE CONFIDENCE rating exactly — one of HIGH, MEDIUM, LOW, INSUFFICIENT. Do not upgrade it just because you like the recommendation.
+- unknowns: copy or summarize that opportunity's UNKNOWN / PRIMARY RESEARCH QUESTION — what still needs interview or data validation before this is a settled problem, not just a hypothesis.
+
 Return ONLY a valid JSON array:
 [
   {
     "priority": "quick_win|medium|high|long_term",
     "title": "<short specific title>",
-    "description": "<what to build/change and why it addresses the underlying problem, referencing the data>"
+    "description": "<what to build/change and why it addresses the underlying problem, referencing the data>",
+    "evidence": "<e.g. 20 occurrences>",
+    "observedBehavior": "<observed user behavior from the source opportunity>",
+    "affectedJourney": "<journey stage(s), e.g. product evaluation → move-to-bag>",
+    "confidence": "HIGH|MEDIUM|LOW|INSUFFICIENT",
+    "unknowns": "<what still needs validation>"
   }
 ]
 

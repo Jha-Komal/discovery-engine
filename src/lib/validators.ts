@@ -180,10 +180,18 @@ export const InsightSchema = z.object({
 
 export const InsightArraySchema = z.array(InsightSchema);
 
+const recommendationConfidence = looseEnum(['HIGH', 'MEDIUM', 'LOW', 'INSUFFICIENT'] as const, 'INSUFFICIENT');
+const optionalString = z.string().optional().transform((v) => v ?? '');
+
 export const RecommendationSchema = z.object({
   priority: z.enum(['quick_win', 'medium', 'high', 'long_term']),
   title: z.string(),
   description: z.string(),
+  evidence: optionalString,
+  observedBehavior: optionalString,
+  affectedJourney: optionalString,
+  confidence: recommendationConfidence,
+  unknowns: optionalString,
 });
 
 export const RecommendationArraySchema = z.array(RecommendationSchema);
