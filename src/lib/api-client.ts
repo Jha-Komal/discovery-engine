@@ -11,8 +11,14 @@ export async function apiFetch<T>(path: string): Promise<T> {
   return json.data;
 }
 
-export async function apiPost<T>(path: string): Promise<T> {
-  const res = await fetch(path, { method: 'POST' });
+export async function apiPost<T>(path: string, body?: unknown): Promise<T> {
+  const res = await fetch(path, {
+    method: 'POST',
+    ...(body !== undefined && {
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    }),
+  });
   const json = (await res.json()) as ApiResponse<T>;
 
   if (!json.success || json.data === undefined) {

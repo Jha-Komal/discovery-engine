@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, MessageSquareText, Lightbulb, FileText, ListChecks } from 'lucide-react';
+import { LayoutDashboard, MessageSquareText, Lightbulb, FileText, ListChecks, Smartphone } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const NAV_ITEMS = [
@@ -11,6 +11,7 @@ const NAV_ITEMS = [
   { href: '/research-report', label: 'Research Report', icon: FileText },
   { href: '/recommendations', label: 'Recommendations', icon: ListChecks },
   { href: '/reviews', label: 'Reviews', icon: MessageSquareText },
+  { href: '/shop', label: 'Shop MVP', icon: Smartphone },
 ];
 
 export function Sidebar() {
